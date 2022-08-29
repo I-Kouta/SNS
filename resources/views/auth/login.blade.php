@@ -1,4 +1,4 @@
-<!-- ログイン前(ログアウト後) -->
+<!-- ログイン画面 -->
 @extends('layouts.logout')
 
 @section('content')
