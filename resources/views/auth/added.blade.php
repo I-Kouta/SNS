@@ -1,3 +1,4 @@
+<!-- 新規登録後に遷移するページ -->
 @extends('layouts.logout')
 
 @section('content')

@@ -1,3 +1,4 @@
+<!-- ログイン前(ログアウト後) -->
 @extends('layouts.logout')
 
 @section('content')

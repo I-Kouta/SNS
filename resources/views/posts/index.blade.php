@@ -1,3 +1,5 @@
+<!-- ログイン時のトップページ -->
+<!-- 未ログイン時は遷移できたらダメ -->
 @extends('layouts.login')
 
 @section('content')
