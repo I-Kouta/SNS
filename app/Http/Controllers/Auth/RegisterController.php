@@ -46,18 +46,13 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function validator(array $data) // ここがバリデーションの内容
     {
-        return $validator = Validator::make($data, [
+        return Validator::make($data, [
             'username' => 'required|string|between:2,12',
             'mail' => 'required|string|email|between:5,40|unique:users',
             'password' => 'required|string|between:8,20|confirmed',
         ]);
-        if ($validator->fails()) {
-            return redirect()->back()
-            ->withInput()
-            ->withErrors($validator);
-        }
     }
 
     /**
@@ -80,7 +75,7 @@ class RegisterController extends Controller
     //     return view("auth.register");
     // }
 
-    public function register(Request $request){
+    public function register(Request $request){ // ここがバリデーションの処理
         if($request->isMethod('post')){
             $data = $request->input();
 
