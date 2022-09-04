@@ -3,7 +3,7 @@
 
 @section('content')
 
-{!! Form::open(['url' => '/added']) !!} <!-- HTMLのformの開始タグに相当 -->
+{!! Form::open() !!} <!-- HTMLのformの開始タグに相当 -->
 
 <h2>新規ユーザー登録</h2>
 
