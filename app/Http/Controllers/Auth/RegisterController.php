@@ -68,6 +68,11 @@ class RegisterController extends Controller
             'mail' => $data['mail'],
             'password' => bcrypt($data['password']),
         ]);
+        //if ($validator->fails()) {
+        //    return redirect()->back()
+        //    ->withInput()
+        //    ->withErrors($validator);
+        //} →ここだとエラーメッセージは何も変化がありませんでした。
     }
 
 
@@ -84,6 +89,7 @@ class RegisterController extends Controller
         }
         return view('auth.register');
     }
+    //public function register〜内に記述をすると変数の名前が違う、というエラーが出ました。
 
     public function added(){
         return view('auth.added');
