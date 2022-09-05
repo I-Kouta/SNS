@@ -68,11 +68,6 @@ class RegisterController extends Controller
             'mail' => $data['mail'],
             'password' => bcrypt($data['password']),
         ]);
-        //if ($validator->fails()) {
-        //    return redirect()->back()
-        //    ->withInput()
-        //    ->withErrors($validator);
-        //} →ここだとエラーメッセージは何も変化がありませんでした。
     }
 
 
@@ -82,14 +77,13 @@ class RegisterController extends Controller
 
     public function register(Request $request){ // ここがバリデーションの処理
         if($request->isMethod('post')){
-            $data = $request->input();
+            $data = $request->input(); // この下でバリデーションに遷移させる
 
             $this->create($data);
             return redirect('added');
         }
         return view('auth.register');
     }
-    //public function register〜内に記述をすると変数の名前が違う、というエラーが出ました。
 
     public function added(){
         return view('auth.added');
