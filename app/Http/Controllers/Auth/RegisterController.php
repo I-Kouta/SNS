@@ -46,12 +46,12 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data) // ここがバリデーションの内容
+    protected function validator(array $data)
     {
         return Validator::make($data, [
-            'username' => 'required|string|between:2,12',
-            'mail' => 'required|string|email|between:5,40|unique:users',
-            'password' => 'required|string|between:8,20|confirmed',
+            'username' => 'required|string|max:255',
+            'mail' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:4|confirmed'
         ]);
     }
 
@@ -75,10 +75,14 @@ class RegisterController extends Controller
     //     return view("auth.register");
     // }
 
-    public function register(Request $request){ // ここがバリデーションの処理
+    public function register(Request $request){
         if($request->isMethod('post')){
-            $data = $request->input(); // この下でバリデーションに遷移させる
-
+            $data = $request->input();
+            $request->validate([
+                'username' => 'required|string|between:2,12',
+                'mail' => 'required|string|email|between:5,40|unique:users',
+                'password' => 'required|string|between:8,20|confirmed'
+            ]);
             $this->create($data);
             return redirect('added');
         }
