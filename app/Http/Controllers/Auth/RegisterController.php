@@ -84,9 +84,9 @@ class RegisterController extends Controller
                 'password' => 'required|string|between:8,20|confirmed'
             ]);
             $this->create($data);
-            return redirect('added');
+            return redirect('added'); // ユーザー登録完了の画面
         }
-        return view('auth.register');
+        return view('auth.register'); // 新規登録の画面
     }
 
     public function added(){
