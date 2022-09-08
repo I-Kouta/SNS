@@ -79,9 +79,9 @@ class RegisterController extends Controller
         if($request->isMethod('post')){
             $data = $request->input();
             $request->validate([
-                'username' => 'required|string|between:2,12',
-                'mail' => 'required|string|email|between:5,40|unique:users',
-                'password' => 'required|string|between:8,20|confirmed'
+                'username' => 'required|string|min:2|max:12',
+                'mail' => 'required|string|email|min:5|max:40|unique:users',
+                'password' => 'required|string|min:8|max:20|confirmed'
             ]);
             $this->create($data);
             return redirect('added'); // ユーザー登録完了の画面
