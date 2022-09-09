@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!-- 登録完了画面 -->
 @extends('layouts.logout')
 
