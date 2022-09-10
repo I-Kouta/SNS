@@ -90,6 +90,7 @@ class RegisterController extends Controller
     }
 
     public function added(){
+        // ここに新規登録したユーザー情報を書く
         return view('auth.added');
     }
 }
