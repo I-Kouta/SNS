@@ -26,7 +26,7 @@
             <div id="">
                 <div id="">
                     <p>〇〇さん<img src="images/arrow.png"></p> <!-- ここにユーザー名表示 -->
-                <div>
+                </div>
                 <ul>
                     <li><a href="/top">ホーム</a></li>
                     <li><a href="/profile">プロフィール</a></li>
