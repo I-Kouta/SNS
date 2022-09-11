@@ -77,13 +77,15 @@ class RegisterController extends Controller
 
     public function register(Request $request){
         if($request->isMethod('post')){
-            $data = $request->input();
+            $data = $request->input(); // ここに入力したデータが入っている
+            // dd($data); // デバッグ関数
             $request->validate([
                 'username' => 'required|string|min:2|max:12',
                 'mail' => 'required|string|email|min:5|max:40|unique:users',
                 'password' => 'required|string|min:8|max:20|confirmed'
             ]);
-            $this->create($data);
+            $this->create($data); // ここで実際に登録作業を行っている
+            $request->session()->put('username', $data['username']); // ここでセッションにusername保存する
             return redirect('added'); // ユーザー登録完了の画面
         }
         return view('auth.register'); // 新規登録の画面
