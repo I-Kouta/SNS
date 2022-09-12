@@ -47,7 +47,6 @@ class LoginController extends Controller
             // ログインが成功したら、トップページへ
             //↓ログイン条件は公開時には消すこと
             if(Auth::attempt($data)){
-                $auths = Auth::user();
                 return redirect('/top');
             }
         }
