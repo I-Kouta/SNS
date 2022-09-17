@@ -28,3 +28,17 @@ header{
     color: #d3d3d3;
     font-size: 20px;
 }
+
+.slide-button{ /* これだけだとトップが線なだけ */
+  position: absolute;
+  /* top: 0; */
+  /* bottom: 0; */
+  right: 1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #f5f5f5;
+  margin: auto;
+  cursor: pointer; /* マウスオン時のカーソルの形 */
+  z-index: 1;
+}

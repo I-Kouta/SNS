@@ -25,7 +25,11 @@
         <h1><a href="/top"><img src="images/atlas.png"></a></h1>
             <div id="user-profile">
                 <div id="user-name">
-                    <p>{{ Auth::user()->username }} さん<img src="images/arrow.png"></p>
+                    <p>{{ Auth::user()->username }} さん
+                        <div class="slide-button down"></div>
+                        <div class="slide-button up"></div>
+                        <img src="images/arrow.png">
+                    </p>
                 </div>
                 <ul>
                     <li><a href="/top">ホーム</a></li>
