@@ -23,9 +23,9 @@
     <header>
         <div id = "head">
         <h1><a href="/top"><img src="images/atlas.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>{{ Auth::user()->username }}さん<img src="images/arrow.png"></p>
+            <div id="user-profile">
+                <div id="user-name">
+                    <p>{{ Auth::user()->username }} さん<img src="images/arrow.png"></p>
                 </div>
                 <ul>
                     <li><a href="/top">ホーム</a></li>
