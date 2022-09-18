@@ -26,8 +26,7 @@
             <div id="user-profile">
                 <div id="user-name">
                     <p>{{ Auth::user()->username }} さん
-                        <div class="slide-button down"></div>
-                        <div class="slide-button up"></div>
+                        <div></div>
                         <img src="images/arrow.png">
                     </p>
                 </div>
