@@ -32,7 +32,7 @@
                     </p>
                 </div>
                 <ul>
-                    <li><a href="/top">ホーム</a></li>
+                    <li><a href="/top">HOME</a></li>
                     <li><a href="/profile">プロフィール</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
