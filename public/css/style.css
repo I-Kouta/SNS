@@ -22,7 +22,9 @@ header{
 }
 
 #user-name{
-    display: flex;
+    /* display: flex; */
+    flex-wrap: wrap;
+    position: relative;
 }
 
 #user-profile p{
@@ -32,4 +34,33 @@ header{
 #user-profile li a{
     color: #d3d3d3;
     font-size: 20px;
+}
+
+.slide-button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #c0c0c0;
+    margin-left: 100px;
+    cursor: pointer; /* マウスオン時のカーソルの形 */
+    z-index: 1;
+}
+
+.down{
+    border-bottom: 2px solid #c0c0c0;
+    -webkit-transform: rotate(-45deg);
+    margin-left: 15%;
+}
+
+.up{
+    border-top: 2px solid #c0c0c0;
+    -webkit-transform: rotate(45deg);
+    margin-left: 15%;
+}
+
+.user-image{
+    margin-left: 5%;
 }
