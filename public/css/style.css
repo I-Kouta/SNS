@@ -24,12 +24,19 @@ header{
 #container{
     flex: 0 0 80%;
 }
+
 #side-bar{
     flex: 0 0 19%;
     border-left: 1px solid #727272;
 }
 
+#user-profile{
+    margin-top: 30px;
+    width: 25%;
+}
+
 #user-name{
+    display: flex;
     flex-wrap: wrap;
     position: relative;
 }
@@ -44,6 +51,7 @@ header{
     border-style: solid;
     border-color: #191970;
     border-width: 1.5px;
+    display: none;
 }
 
 #user-profile ul li a{
