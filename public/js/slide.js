@@ -2,9 +2,9 @@ $(function () {
   $('.slide-button').click(function () { // ↓をクリック
     $(this).toggleClass('active'); // ボタンにactiveを追加or削除
     if ($(this).hasClass('active')) {
-      $(this).addClass('active');
+      $('#user-profile ul li').fadeIn().addClass('active');
     } else {
-      $(this).removeClass('active');
+      $('#user-profile ul li').fadeOut().removeClass('active');
     }
   });
 });
