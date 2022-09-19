@@ -6,6 +6,14 @@ body{
 /* header */
 header{
     background:#186AC9;
+    display: flex;
+    justify-content: space-between;
+}
+
+#head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* main content */
@@ -32,7 +40,6 @@ header{
 
 #user-profile ul li{
     background-color: #ffffff;
-    width: 25%;
     text-align: center;
     border-style: solid;
     border-color: #191970;
@@ -52,7 +59,6 @@ header{
     width: 20px;
     height: 20px;
     border-left: 2px solid #c0c0c0;
-    margin-left: 100px;
     cursor: pointer; /* マウスオン時のカーソルの形 */
     z-index: 1;
 }
@@ -60,13 +66,13 @@ header{
 .down{
     border-bottom: 2px solid #c0c0c0;
     -webkit-transform: rotate(-45deg);
-    margin-left: 15%;
+    margin-left: 80%;
 }
 
 .up{
     border-top: 2px solid #c0c0c0;
     -webkit-transform: rotate(45deg);
-    margin-left: 15%;
+    margin-left: 80%;
 }
 
 .user-image{
