@@ -49,17 +49,16 @@ header{
     background-color: #ffffff;
     text-align: center;
     border-style: solid;
-    border-color: #191970;
     border-width: 1.5px;
     display: none;
 }
 
-#user-profile ul li.active{
-    display: block;
+#user-profile ul li:hover{
+    background-color: #191970;
 }
 
 #user-profile ul li a{
-    color: #dcdcdc;
+    color: #d3d3d3;
     font-size: 2rem;
 }
 
