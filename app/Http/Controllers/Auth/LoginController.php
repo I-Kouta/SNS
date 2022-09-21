@@ -52,4 +52,8 @@ class LoginController extends Controller
         }
         return view("auth.login");
     }
+
+    public function loggedOut(\Illuminate\Http\Request $request) {
+        return redirect('login');
+    }
 }
