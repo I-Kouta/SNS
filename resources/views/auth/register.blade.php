@@ -7,16 +7,16 @@
 
 <h2>新規ユーザー登録</h2>
 
-{{ Form::label('ユーザー名') }}
+{{ Form::label('user-name', 'user name') }} <!-- 'for', '表記される' -->
 {{ Form::text('username',null,['class' => 'input', 'placeholder' => 'admin']) }}
 
-{{ Form::label('メールアドレス') }}
+{{ Form::label('address'), 'mail address' }}
 {{ Form::text('mail',null,['class' => 'input', 'placeholder' => 'admin@atlas.com']) }}
 
-{{ Form::label('パスワード') }}
+{{ Form::label('password', 'password') }}
 {{ Form::password('password',null,['class' => 'input']) }}
 
-{{ Form::label('パスワード確認') }}
+{{ Form::label('password', 'password_confirmation') }}
 {{ Form::password('password_confirmation',null,['class' => 'input']) }}
 
 {{ Form::submit('REGISTER') }}
