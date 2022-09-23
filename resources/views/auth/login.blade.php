@@ -3,16 +3,17 @@
 
 @section('content')
 
-{!! Form::open() !!}
+{!! Form::open(['class' => 'gray-back']) !!}
 
 <p>AtlasSNSへようこそ</p>
 
-{{ Form::label('address', 'mail address') }} <!-- 'for', '表記される' -->
-{{ Form::text('mail',null,['class' => 'input']) }}
-{{ Form::label('password', 'password') }}
-{{ Form::password('password',['class' => 'input']) }}
+{{ Form::label('address', 'mail address', ['class' => 'address']) }}<br /> <!-- 'for', '表記される' -->
+{{ Form::text('mail',null,['class' => 'input']) }}<br />
 
-{{ Form::submit('LOGIN') }}
+{{ Form::label('password', 'password', ['class' => 'pass']) }}<br />
+{{ Form::password('password',['class' => 'input']) }}<br />
+
+{{ Form::submit('LOGIN',['class' => 'red-btn']) }}
 
 <p><a href="/register">新規ユーザーの方はこちら</a></p>
 
