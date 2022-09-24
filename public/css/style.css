@@ -49,6 +49,7 @@ header{
 
 #user-profile ul li:hover{
     background-color: #191970;
+    cursor: pointer;
 }
 
 #user-profile ul li a{
