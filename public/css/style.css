@@ -106,6 +106,11 @@ header{
     margin-bottom: 20px;
 }
 
+.follow-count{
+    display: flex;
+    justify-content: space-around;
+}
+
 .btn{
     width: 50%;
     background-color: #186AC9;
