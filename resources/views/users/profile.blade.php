@@ -8,6 +8,7 @@
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
   {{ Form::text('username',null,['class' => 'input']) }}
 </div>
+
 <div class="category">
   {{ Form::label('address', 'mail address', ['class' => 'address']) }}
   {{ Form::text('mail',null,['class' => 'input']) }}
@@ -34,8 +35,6 @@
 </div>
 
 {{ Form::submit('更新',['class' => 'red-btn']) }}
-
-<!-- <p><a href="/login">ログイン画面へ戻る</a></p> -->
 
 {!! Form::close() !!}
 
