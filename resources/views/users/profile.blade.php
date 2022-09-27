@@ -6,12 +6,12 @@
 
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
-  {{ Form::text('username',null,['class' => 'input']) }}
+  {{ Form::text('username',Auth::user()->username,['class' => 'input']) }}
 </div>
 
 <div class="category">
   {{ Form::label('address', 'mail address', ['class' => 'address']) }}
-  {{ Form::text('mail',null,['class' => 'input']) }}
+  {{ Form::text('mail',Auth::user()->mail,['class' => 'input']) }}
 </div>
 
 <div class="category">
