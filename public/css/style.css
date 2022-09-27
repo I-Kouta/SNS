@@ -145,10 +145,6 @@ header{
     justify-content: space-between;
 }
 
-.last{
-    margin-bottom: 20px;
-}
-
 .input {
     border: 2px solid #696969;
     background-color: #d3d3d3;
@@ -163,7 +159,7 @@ header{
 }
 
 .red-btn {
-    margin: auto 25%;
+    margin: 20px 25% auto 25%;
     color: #f5f5f5;
     font-size: 20px;
     background-color: #dc143c;
