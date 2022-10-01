@@ -29,7 +29,7 @@
   {{ Form::password('password_confirmation',['class' => 'input']) }}
 </div>
 
-<div class="category last">
+<div class="category">
   {{ Form::label('icon-image', 'icon image', ['class' => 'icon-image']) }}
   {{ Form::password('password_confirmation',['class' => 'input file']) }}
 </div>
