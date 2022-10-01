@@ -29,7 +29,7 @@
                 <div id="user-name">
                     <p>{{ Auth::user()->username }} さん</p>
                     <span class="slide-button down"></span>
-                    <img class="user-image" src="images/arrow.png">
+                    <img class="user-image" src="images/icon1.png">
                 </div>
                 <ul>
                     <li><a href="/top">HOME</a></li>

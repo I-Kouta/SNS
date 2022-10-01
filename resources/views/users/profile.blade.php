@@ -4,6 +4,7 @@
 
 {!! Form::open(['class' => 'profile-top']) !!}
 
+<img class="user-image" src="images/icon1.png">
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
   {{ Form::text('username',Auth::user()->username,['class' => 'input']) }}
