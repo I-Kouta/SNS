@@ -31,7 +31,7 @@
 
 <div class="category">
   {{ Form::label('icon-image', 'icon image', ['class' => 'icon-image']) }}
-  {{ Form::password('password_confirmation',['class' => 'input file']) }}
+  {{ Form::file('image', ['class' => 'input file']) }}
 </div>
 
 {{ Form::submit('更新',['class' => 'red-btn']) }}
