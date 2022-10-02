@@ -133,6 +133,10 @@ header{
     margin: 20px 25% auto 25%;
 }
 
+.profile-icon{
+    margin-top: 20px;
+}
+
 .profile-top{
     display: block;
     justify-content: space-around;
