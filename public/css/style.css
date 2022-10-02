@@ -18,8 +18,9 @@ header{
 }
 
 .user-image{
-    width: 30px;
-    height: 30px;
+    margin-left: 5%;
+    width: 25px;
+    height: 25px;
 }
 
 #user-profile{
@@ -81,10 +82,6 @@ header{
 .slide-button.active{
     -webkit-transform: rotate(135deg); /* 時計回り/\ */
     margin-left: 80%;
-}
-
-.user-image{
-    margin-left: 5%;
 }
 
 /* main content */
