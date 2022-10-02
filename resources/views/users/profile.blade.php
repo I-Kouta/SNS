@@ -3,7 +3,7 @@
 @section('content')
 
 <img class="user-image profile-icon" src="images/icon1.png">
-{!! Form::open(['class' => 'profile-top']) !!}
+{!! Form::open(['url' => '/profile/update','class' => 'profile-top']) !!}
 
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
