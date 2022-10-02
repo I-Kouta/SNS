@@ -86,9 +86,9 @@ class RegisterController extends Controller
             ]);
             $this->create($data); // ここで実際に登録作業を行っている
             $request->session()->put('username', $data['username']); // ここでセッションにusernameを保存する
-            return redirect('added'); // ユーザー登録完了の画面
+            return redirect('added'); // ユーザー登録完了の画面、次へ進む
         }
-        return view('auth.register'); // 新規登録の画面
+        return view('auth.register'); // 新規登録の画面、留まる
     }
 
     public function added(){
