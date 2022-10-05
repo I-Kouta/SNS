@@ -5,6 +5,11 @@
 
 {!! Form::open(['class' => 'gray-back']) !!} <!-- HTMLのformの開始タグに相当 -->
 
+<div class="form-group">
+  {!! Form::hidden('id', $user->id) !!}
+  {!! Form::input('text', 'upUser', $user->user, ['required', 'class' => 'form-control']) !!}
+</div>
+
 <h2>新規ユーザー登録</h2>
 
 {{ Form::label('user-name', 'user name', ['class' => 'name']) }}<br /> <!-- 'for', '表記される' -->

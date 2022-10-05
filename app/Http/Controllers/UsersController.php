@@ -23,8 +23,8 @@ class UsersController extends Controller
             \DB::table('users') // postsテーブルを更新している
             ->where('id', $id)
             ->update(
-                ['user' => $up_user]
-        );
+                ['post' => $up_user]
+            );
             return redirect('/top'); // トップに移動する
         }
         return view('users.profile'); // 留まる
