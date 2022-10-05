@@ -18,7 +18,13 @@ class UsersController extends Controller
                 'mail' => 'required|string|email|min:5|max:40|unique:users',
                 'password' => 'required|string|min:8|max:20|confirmed'
             ]);
-            $this->create($data);
+            $id = $request->input('id');
+            $up_user = $request->input('upUser');
+            \DB::table('users') // postsテーブルを更新している
+            ->where('id', $id)
+            ->update(
+                ['user' => $up_user]
+        );
             return redirect('/top'); // トップに移動する
         }
         return view('users.profile'); // 留まる
