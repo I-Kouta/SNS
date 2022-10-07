@@ -6,7 +6,6 @@
 {!! Form::open(['class' => 'gray-back']) !!} <!-- HTMLのformの開始タグに相当 -->
 
 <div class="form-group">
-  {!! Form::hidden('id', $user->id) !!}
   {!! Form::input('text', 'upUser', $user->user, ['required', 'class' => 'form-control']) !!}
 </div>
 

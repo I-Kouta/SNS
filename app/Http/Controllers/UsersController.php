@@ -10,22 +10,19 @@ class UsersController extends Controller
     public function profile(){
         return view('users.profile');
     }
+
     public function profileUpdate(Request $request){
         if($request->isMethod('post')){
-            $data = $request->input(); // ここに入力したデータが入っている
+            $up_user = $request->input('upUser');
             $request->validate([
                 'username' => 'required|string|min:2|max:12',
                 'mail' => 'required|string|email|min:5|max:40|unique:users',
                 'password' => 'required|string|min:8|max:20|confirmed'
             ]);
-            $id = $request->input('id');
-            $up_user = $request->input('upUser');
-            \DB::table('users') // postsテーブルを更新している
-            ->where('id', $id)
-            ->update(
-                ['post' => $up_user]
-            );
-            return redirect('/top'); // トップに移動する
+            \DB::table('users')->insert([
+                'user' => $user
+            ]);
+            return redirect('/top'); // トップに移動する、正常に処理が完了
         }
         return view('users.profile'); // 留まる
     }
