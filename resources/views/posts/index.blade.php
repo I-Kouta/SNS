@@ -9,7 +9,7 @@
 <div class="tweet-form">
   <img class="form-icon" src="images/icon1.png" width="35" height="35">
   {{ Form::text('username',null,['class' => 'tweet', 'placeholder' => '投稿内容を入力してください']) }}
-  <img class="post-icon" src="images/post.png" width="70" height="70">
+  <a href="/top"><img class="post-icon" src="images/post.png" width="70" height="70"></a>
 </div>
 
 {!! Form::close() !!}

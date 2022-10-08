@@ -182,7 +182,7 @@ header{
 /* 投稿フォーム */
 .post-form{
     border-bottom: 6px solid #d3d3d3;
-    padding: 30px 0 0 40px;
+    padding: 30px 0 20px 40px;
 }
 
 .tweet-form{
@@ -194,4 +194,8 @@ header{
     width: 50%;
     font-size: 20px;
     margin-left: 10px;
+}
+
+::placeholder{
+    color: #dcdcdc;
 }
