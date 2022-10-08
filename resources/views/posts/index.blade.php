@@ -7,8 +7,8 @@
 {!! Form::open(['class' => 'post-form']) !!}
 
 <img class="form-icon" src="images/icon1.png" width="35" height="35">
-{{ Form::text('username',null,['class' => '', 'placeholder' => '投稿内容を入力してください']) }}
-<img class="user-image" src="images/post.png">
+{{ Form::text('username',null,['class' => 'form-text', 'placeholder' => '投稿内容を入力してください']) }}
+<img class="post-icon" src="images/post.png" width="70" height="70">
 
 {!! Form::close() !!}
 

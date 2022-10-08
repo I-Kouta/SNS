@@ -183,3 +183,7 @@ header{
 .post-form{
     border-bottom: 6px solid #d3d3d3;
 }
+
+.form-text{
+    border: none;
+}
