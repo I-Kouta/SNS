@@ -11,4 +11,8 @@ class PostsController extends Controller
         // ここにログインしたユーザー情報を書く
         return view('posts.index');
     }
+
+    public function create(){
+    }
+
 }
