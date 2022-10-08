@@ -3,9 +3,10 @@
 @extends('layouts.login')
 
 @section('content')
-<img class="user-image" src="images/icon1.png">
 
 {!! Form::open(['class' => 'gray-back']) !!}
+
+<img class="user-image" src="images/icon1.png">
 
 {{ Form::text('username',null,['class' => '', 'placeholder' => '投稿内容を入力してください']) }}
 
