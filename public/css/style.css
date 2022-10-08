@@ -184,6 +184,13 @@ header{
     border-bottom: 6px solid #d3d3d3;
 }
 
-.form-text{
+.tweet-form{
+    display: flex;
+}
+
+.tweet{
     border: none;
+    width: 50%;
+    font-size: 20px;
+    margin-left: 10px;
 }
