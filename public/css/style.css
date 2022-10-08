@@ -178,3 +178,8 @@ header{
 .file{
     height: 60px;
 }
+
+/* 投稿フォーム */
+.post-form{
+    border-bottom: 6px solid #d3d3d3;
+}

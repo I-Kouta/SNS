@@ -4,12 +4,10 @@
 
 @section('content')
 
-{!! Form::open(['class' => 'gray-back']) !!}
+{!! Form::open(['class' => 'post-form']) !!}
 
 <img class="user-image" src="images/icon1.png">
-
 {{ Form::text('username',null,['class' => '', 'placeholder' => '投稿内容を入力してください']) }}
-
 <img class="user-image" src="images/post.png">
 
 {!! Form::close() !!}
