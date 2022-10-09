@@ -199,3 +199,9 @@ header{
 ::placeholder{
     color: #dcdcdc;
 }
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
