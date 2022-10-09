@@ -12,7 +12,13 @@ class PostsController extends Controller
         return view('posts.index');
     }
 
-    public function create(){
+    public function create(Request $request){
+        $post = $request->input('newPost');
+        // dd($request);
+        \DB::table('posts')->insert([
+            'post' => $post
+        ]);
+        return redirect('index');
     }
 
 }
