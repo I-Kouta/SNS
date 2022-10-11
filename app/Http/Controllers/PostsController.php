@@ -19,15 +19,13 @@ class PostsController extends Controller
 
     public function create(Request $request){
         $post = $request->input('newPost');
-        $id = $request->input('id');
+        $user_id = Auth::id();
         // dd($request);
-        $post->validate([
-            'post' => 'required|string|min:1|max:200|',
-        ]);
         \DB::table('posts')->insert([
+            'user_id' => $user_id,
             'post' => $post
         ]);
-        return redirect('index');
+        return redirect('/top');
     }
 
 }
