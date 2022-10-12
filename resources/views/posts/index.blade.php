@@ -14,4 +14,12 @@
 
 {!! Form::close() !!}
 
+@foreach ($list as $list)
+<tr>
+  <td>{{ $list->id }}</td></br>
+  <td>{{ $list->post }}</td></br>
+  <td>{{ $list->created_at }}</td></br>
+</tr>
+@endforeach
+
 @endsection

@@ -10,7 +10,9 @@ class PostsController extends Controller
     //
     public function index(){
         // ここにログインしたユーザー情報を書く
-        return view('posts.index');
+        $list = \DB::table('posts')->get();
+        $name = \DB::table('users')->get();
+        return view('posts.index', ['list'=>$list], ['name'=>$name]);
     }
 
     public function create(Request $request){
