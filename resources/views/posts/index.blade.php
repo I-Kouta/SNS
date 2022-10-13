@@ -16,7 +16,7 @@
 
 <table class='table'>
   @foreach ($list as $list)
-  <tr>
+  <tr class="list">
     <td>{{ $list->user_id }}</td>
     <td>{{ $list->post }}</td>
     <td>{{ $list->created_at }}</td>
