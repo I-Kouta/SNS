@@ -14,14 +14,18 @@
 
 {!! Form::close() !!}
 
-<table class='table'>
+<div class='table'>
   @foreach ($list as $list)
-  <tr class="list">
-    <td>{{ $list->user_id }}</td>
-    <td>{{ $list->post }}</td>
-    <td>{{ $list->created_at }}</td>
-  </tr>
+  <div class="list">
+    <div class="left-list">
+      <div>{{ $list->user_id }}</div>
+      <div>{{ $list->post }}</div>
+    </div>
+    <div class="right-list">
+      <div>{{ $list->created_at }}</div>
+    </div>
+  </div>
   @endforeach
-</table>
+</div>
 
 @endsection
