@@ -206,3 +206,8 @@ button{
     border: none;
     cursor: pointer;
 }
+
+/* 表示されている投稿 */
+.table{
+    width: 100%;
+}
