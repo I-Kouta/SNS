@@ -9,7 +9,7 @@
 <div class="tweet-form">
   <img class="form-icon" src="images/icon1.png" width="35" height="35">
   {{ Form::input('text', 'newPost', null, ['required', 'class' => 'tweet', 'placeholder' => '投稿内容を入力してください']) }}
-  <button type="submit" class="post-icon"><img src="images/post.png" width="100" height="100"></button>
+  <button type="submit"><img src="images/post.png" width="100" height="100"></button>
 </div>
 
 {!! Form::close() !!}
@@ -25,11 +25,11 @@
       <div>{{ $list->created_at }}</div>
 
       {!! Form::open() !!}
-      <button type="submit" class="post-icon"><img src="images/edit.png" width="20" height="20"></button>
+      <button type="submit" ><img src="images/edit.png" width="20" height="20"></button>
       {!! Form::close() !!}
 
       {!! Form::open() !!}
-      <button type="submit" class="post-icon"><img src="images/trash-h.png" width="20" height="20"></button>
+      <button type="submit"><img src="images/trash-h.png" width="20" height="20"></button>
       {!! Form::close() !!}
 
     </div>
