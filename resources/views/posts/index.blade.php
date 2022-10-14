@@ -23,6 +23,15 @@
     </div>
     <div class="right-list">
       <div>{{ $list->created_at }}</div>
+
+      {!! Form::open() !!}
+      <button type="submit" class="post-icon"><img src="images/edit.png" width="20" height="20"></button>
+      {!! Form::close() !!}
+
+      {!! Form::open() !!}
+      <button type="submit" class="post-icon"><img src="images/trash-h.png" width="20" height="20"></button>
+      {!! Form::close() !!}
+
     </div>
   </div>
   @endforeach
