@@ -222,3 +222,7 @@ button{
 .right-list{
     font-size: 3px;
 }
+
+.update-edit{
+    display: flex;
+}
