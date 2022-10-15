@@ -18,19 +18,14 @@
   @foreach ($list as $list)
   <div class="list">
     <div class="left-list">
-      <div>{{ $list->user_id }}</div>
+      <div>{{ $list->user_id }}</div> <!-- ここはuser_idに紐づいているusersテーブルのusernameを表示したい -->
       <div>{{ $list->post }}</div>
     </div>
     <div class="right-list">
       <div>{{ $list->created_at }}</div>
       <div class="update-edit">
-        {!! Form::open() !!}
         <button type="submit" ><img src="images/edit.png" width="20" height="20"></button>
-        {!! Form::close() !!}
-
-        {!! Form::open() !!}
         <button type="submit"><img src="images/trash-h.png" width="30" height="30"></button>
-        {!! Form::close() !!}
       </div>
     </div>
   </div>

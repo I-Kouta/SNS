@@ -10,6 +10,7 @@ class PostsController extends Controller
     //
     public function index(){
         // ここにログインしたユーザー情報を書く
+        // order by created_at desc;
         $list = \DB::table('posts')->get();
         return view('posts.index',['list'=>$list]);
     }
