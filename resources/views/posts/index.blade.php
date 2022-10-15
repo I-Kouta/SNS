@@ -25,7 +25,7 @@
       <div>{{ $list->created_at }}</div>
       <div class="update-edit">
         <button type="submit" ><img src="images/edit.png" width="20" height="20"></button>
-        <button type="submit"><img src="images/trash-h.png" width="30" height="30"></button>
+        <button type="submit"><img src="images/trash.png" width="20" height="20"></button>
       </div>
     </div>
   </div>
