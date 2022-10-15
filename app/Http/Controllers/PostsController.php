@@ -11,7 +11,11 @@ class PostsController extends Controller
     public function index(){
         // ここにログインしたユーザー情報を書く
         // order by created_at desc;
-        $list = \DB::table('posts')->orderBy('created_at', 'desc')->get();
+        $list = \DB::table('posts')
+        ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
+        ->join('users', 'posts.user_id', '=', 'users.id')
+        ->orderBy('created_at', 'desc')
+        ->get();
         return view('posts.index',['list'=>$list]);
     }
 

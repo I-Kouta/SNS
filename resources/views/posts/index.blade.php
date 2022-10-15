@@ -18,7 +18,7 @@
   @foreach ($list as $list)
   <div class="list">
     <div class="left-list">
-      <div>{{ $list->user_id }}</div> <!-- ここはuser_idに紐づいているusersテーブルのusernameを表示したい -->
+      <div>{{ $list->user_name }}</div>
       <div>{{ $list->post }}</div>
     </div>
     <div class="right-list">
