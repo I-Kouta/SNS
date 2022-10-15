@@ -24,7 +24,7 @@
     <div class="right-list">
       <div>{{ $list->created_at }}</div>
       <div class="update-edit">
-        <a><img src="images/edit.png" width="30" height="30"></a>
+        <a href="/top"><img src="images/edit.png" width="30" height="30"></a>
         <a href="/top"><img src="images/trash.png" width="30" height="30"></a>
       </div>
     </div>
