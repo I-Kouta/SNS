@@ -25,7 +25,7 @@
       <div>{{ $list->created_at }}</div>
       <div class="update-edit">
         <a href="/top"><img src="images/edit.png" width="30" height="30"></a>
-        <a href="/top"><img src="images/trash.png" width="30" height="30"></a>
+        <a href="/top" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')"><img src="images/trash.png" width="30" height="30"></a>
       </div>
     </div>
   </div>
