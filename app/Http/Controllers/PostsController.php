@@ -30,4 +30,6 @@ class PostsController extends Controller
         return redirect('/top');
     }
 
+    public function delete(){}
+
 }

@@ -26,7 +26,7 @@
       <!-- ここは自身の投稿にだけ表示されてほしい -->
       <div class="update-edit">
         <a href="/top"><img src="images/edit.png" width="30" height="30"></a>
-        <a href="/top" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')"><img src="images/trash.png" width="30" height="30"></a>
+        <a href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')"><img src="images/trash.png" width="30" height="30"></a>
       </div>
       <!-- ここは自身の投稿にだけ表示されてほしい -->
     </div>
