@@ -24,8 +24,8 @@
     <div class="right-list">
       <div>{{ $list->created_at }}</div>
       <div class="update-edit">
-        <button type="submit" ><img src="images/edit.png" width="20" height="20"></button>
-        <button type="submit"><img src="images/trash.png" width="20" height="20"></button>
+        <a><img src="images/edit.png" width="30" height="30"></a>
+        <a href="/top"><img src="images/trash.png" width="30" height="30"></a>
       </div>
     </div>
   </div>
