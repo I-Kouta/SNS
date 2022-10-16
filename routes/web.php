@@ -19,7 +19,7 @@
 //Auth::routes();
 
 
-//ログアウト中のページ,ここにログアウト時にはいけない
+//ログアウト中のページ,ここにログイン時にはいけない
 Route::group(["middleware" => "guest"], function() {
   Route::get('/login', 'Auth\LoginController@login')->name('login'); // ルーティング->('任意の名前');
   Route::post('/login', 'Auth\LoginController@login');
