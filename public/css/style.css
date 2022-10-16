@@ -213,10 +213,18 @@ button{
 
 .list{
     border-bottom: 3px solid #d3d3d3;
-    height: 70px;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     padding: 20px 20px 0 20px;
+}
+
+.left-list{
+    font-size: 15px;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .right-list{
