@@ -22,7 +22,7 @@ class PostsController extends Controller
     public function create(Request $request){
         $post = $request->input('newPost');
         $user_id = Auth::id();
-        // dd($request);
+        // dd($post);
         \DB::table('posts')->insert([
             'user_id' => $user_id,
             'post' => $post
