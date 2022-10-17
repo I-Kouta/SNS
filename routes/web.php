@@ -41,7 +41,10 @@ Route::group(["middleware" => "auth"], function() {
   Route::get('/profile','UsersController@profile');
   Route::post('/profile/update','UsersController@profileUpdate');
 
+  // edit, deleteは直接URL入力してもできないようにしたい
   Route::get('post/{id}/delete', 'PostsController@delete');
+
+  // edit, deleteは直接URL入力してもできないようにしたい
 
   Route::get('/search','UsersController@index');
 
