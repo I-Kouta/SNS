@@ -16,4 +16,9 @@ $(function () {
     $('.modal_id').val(post_id);
     return false;
   });
+
+  $('.js-modal-close').on('click', function () {
+    $('.js-modal').fadeOut(); // 中身をフェードアウト
+    return false;
+  });
 });
