@@ -7,4 +7,13 @@ $(function () {
       $('#user-profile ul li').fadeOut().removeClass('active');
     }
   });
+
+  $('.js-modal-open').on('click', function () {
+    $('.js-modal').fadeIn();
+    var post = $(this).attr('post');
+    var post_id = $(this).attr('post_id');
+    $('.modal_post').text(post);
+    $('.modal_id').val(post_id);
+    return false;
+  });
 });

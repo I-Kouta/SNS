@@ -236,3 +236,12 @@ button{
     justify-content: space-around;
     margin: 20px 0 0 20%;
 }
+
+/* 編集画面 */
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
