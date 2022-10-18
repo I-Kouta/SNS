@@ -24,7 +24,7 @@
 <body>
     <header>
         <div id = "head">
-            <h1><a href="/top"><img class="atlas-image" src="images/atlas.png"></a></h1>
+            <h1><a href="/top"><img src="images/atlas.png"></a></h1>
             <div id="user-profile">
                 <div id="user-name">
                     <p>{{ Auth::user()->username }} さん</p>

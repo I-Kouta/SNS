@@ -244,5 +244,11 @@ button{
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+.modal__bg{
     background-color: rgb(169, 169, 169, 0.4);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
 }
