@@ -33,7 +33,7 @@
               <form action="" method="">
                 <textarea name="" class="modal_post"></textarea>
                 <input type="hidden" name="" class="modal_id" value="">
-                <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a>
+                <a href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a>
                 {{ csrf_field() }}
               </form>
             </div>

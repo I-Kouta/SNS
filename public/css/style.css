@@ -260,3 +260,9 @@ button{
     padding: 50px;
     border-radius: 10px;
 }
+
+.modal_post{
+    width: 300px;
+    height: 100px;
+    font-size: 15px;
+}
