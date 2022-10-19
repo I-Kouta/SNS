@@ -30,6 +30,8 @@ class PostsController extends Controller
         return redirect('/top');
     }
 
+    public function update(Request $request){}
+
     public function delete($id){
         \DB::table('posts')
         ->where('id', $id)
