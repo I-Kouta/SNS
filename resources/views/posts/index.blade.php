@@ -25,7 +25,7 @@
       <div>{{ $list->created_at }}</div>
       @if(Auth::id() == $list->user_id)
       <div class="update-edit">
-        <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a>
+        <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- これは編集ボタン -->
         <!-- 編集内容が表示される -->
         <div class="modal js-modal">
           <div class="modal__bg js-modal-close">
@@ -33,7 +33,7 @@
               <form action="" method="">
                 <textarea name="" class="modal_post"></textarea>
                 <input type="hidden" name="" class="modal_id" value="">
-                <a href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a>
+                <a href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- ここでpost/updateに遷移させたい -->
                 {{ csrf_field() }}
               </form>
             </div>
