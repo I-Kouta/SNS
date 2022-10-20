@@ -30,12 +30,12 @@
         <div class="modal js-modal">
           <div class="modal__bg js-modal-close">
             <div class="modal__content">
-              <form action="" method="">
+              {!! Form::open(['url' => '/post/update']) !!}
                 <textarea name="" class="modal_post"></textarea>
                 <input type="hidden" name="" class="modal_id" value="">
                 <a href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- ここでpost/updateに遷移させたい -->
                 {{ csrf_field() }}
-              </form>
+              {!! Form::close() !!}
             </div>
           </div>
         </div>
