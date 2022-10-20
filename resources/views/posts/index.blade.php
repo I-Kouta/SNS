@@ -31,10 +31,10 @@
           <div class="modal__bg js-modal-close">
             <div class="modal__content">
               {!! Form::open(['url' => '/post/update']) !!}
-                <textarea name="" class="modal_post"></textarea>
-                <input type="hidden" name="" class="modal_id" value="">
-                <a href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- ここでpost/updateに遷移させたい -->
-                {{ csrf_field() }}
+              {!! Form::hidden('id', $list->id, ['class' => 'modal_id']) !!}
+              <textarea name="" class="modal_post"></textarea>
+              <a href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- ここでpost/updateに遷移させたい -->
+              {{ csrf_field() }}
               {!! Form::close() !!}
             </div>
           </div>
