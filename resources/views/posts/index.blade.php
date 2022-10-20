@@ -32,7 +32,8 @@
             <div class="modal__content">
               {!! Form::open(['url' => '/post/update']) !!}
               {!! Form::hidden('id', $list->id, ['class' => 'modal_id']) !!}
-              <textarea name="" class="modal_post"></textarea>
+              <!-- <textarea name="" class="modal_post"></textarea> -->
+              {!! Form::textarea('textarea', 'upPost', ['required', 'class' => 'modal_post']) !!}
               <a href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- ここでpost/updateに遷移させたい -->
               {{ csrf_field() }}
               {!! Form::close() !!}
