@@ -33,6 +33,7 @@ class PostsController extends Controller
     public function update(Request $request){
         $id = $request->input('id');
         $up_post = $request->input('upPost');
+        // dd($up_post); // これが空なのが原因
         \DB::table('posts')
         ->where('id', $id)
         ->update(
