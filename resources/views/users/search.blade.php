@@ -9,11 +9,13 @@
 
 <div class="search-form">
   @foreach ($user as $user)
+  @if(Auth::id() != $user->id)
   <div class="search-info">
     <div>{{ $user->username }}</div>
     <button type="submit" class="red-btn">フォロー</button>
   </div>
-    @endforeach
+  @endif
+  @endforeach
 </div>
 
 @endsection
