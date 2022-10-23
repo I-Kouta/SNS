@@ -269,3 +269,11 @@ button{
     font-size: 20px;
     margin-left: 10px;
 }
+
+.search-form{
+    margin: auto 25%;
+}
+
+.search-info{
+    display: flex;
+}
