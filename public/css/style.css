@@ -250,7 +250,7 @@ button{
     background-color: rgb(169, 169, 169, 0.4);
     height: 100vh;
     width: 100%;
-    position: relative;
+    position: absolute;
 }
 
 .modal__content{
