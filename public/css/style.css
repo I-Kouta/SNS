@@ -263,3 +263,12 @@ button{
     height: 100px;
     font-size: 15px;
 }
+
+/* 検索フォーム */
+.search{
+    border: solid 2px #a9a9a9;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 20px;
+    margin-left: 10px;
+}
