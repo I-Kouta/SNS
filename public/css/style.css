@@ -204,9 +204,6 @@ button{
 }
 
 /* 表示されている投稿 */
-.table{
-    width: 100%;
-}
 
 .list{
     border-bottom: 3px solid #d3d3d3;

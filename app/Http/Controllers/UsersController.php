@@ -28,7 +28,8 @@ class UsersController extends Controller
     }
 
     public function search(){
-        return view('users.search');
+        $user = \DB::table('users')->get();
+        return view('users.search',['user'=>$user]);
     }
 
     public function searchResult(){}

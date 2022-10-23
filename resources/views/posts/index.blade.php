@@ -10,7 +10,6 @@
   <button type="submit"><img src="images/post.png" width="100" height="100"></button>
 {!! Form::close() !!}
 
-<div class='table'>
   @foreach ($list as $list)
   <div class="list">
     <div class="left-list">
@@ -41,6 +40,5 @@
     </div>
   </div>
   @endforeach
-</div>
 
 @endsection
