@@ -22,7 +22,7 @@
       <div>{{ $list->post }}</div>
     </div>
     <div class="right-list">
-      <div>{{ $list->created_at }}</div>
+      <div>{{ $list->updated_at }}</div>
       @if(Auth::id() == $list->user_id)
       <div class="update-edit">
         <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- これは編集ボタン -->
