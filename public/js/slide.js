@@ -16,4 +16,10 @@ $(function () {
     $('.modal_id').val(post_id); // 投稿に紐づいているidの取得
     return false;
   });
+
+  $('.js-modal-close').on('click',function(){
+        // モーダルの中身(class="js-modal")を非表示
+        $('.js-modal').fadeOut();
+        return false;
+    });
 });
