@@ -32,5 +32,8 @@ class UsersController extends Controller
         return view('users.search',['user'=>$user]);
     }
 
-    public function searchResult(){}
+    public function searchResult(Request $request){
+        $keyword = $request->input('keyword');
+        dd($keyword);
+    }
 }
