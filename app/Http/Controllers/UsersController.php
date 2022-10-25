@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
 class UsersController extends Controller
 {
     //
@@ -34,6 +36,11 @@ class UsersController extends Controller
 
     public function searchResult(Request $request){
         $keyword = $request->input('keyword');
-        dd($keyword);
+        $query = User::query();
+        if(!empty($keyword)){
+            $query->where('username', 'LIKE', "%{$keyword}%");
+        }
+        $user = $query->get();
+        // dd($user); // items: array:1
     }
 }
