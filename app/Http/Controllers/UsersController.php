@@ -42,5 +42,6 @@ class UsersController extends Controller
         }
         $user = $query->get();
         // dd($user); // items: array:1
+        return view('users.search', compact('user', 'keyword'));
     }
 }
