@@ -10,7 +10,6 @@ class PostsController extends Controller
     //
     public function index(){
         // ここにログインしたユーザー情報を書く
-        // order by created_at desc;
         $list = \DB::table('posts')
         ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
         ->join('users', 'posts.user_id', '=', 'users.id')

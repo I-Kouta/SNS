@@ -27,7 +27,7 @@ Route::group(["middleware" => "guest"], function() {
   Route::get('/register', 'Auth\RegisterController@register');
   Route::post('/register', 'Auth\RegisterController@register');
 
-  Route::get('/added', 'Auth\RegisterController@added'); // ここはログイン前
+  Route::get('/added', 'Auth\RegisterController@added');
   Route::post('/added', 'Auth\RegisterController@added');
 });
 
@@ -41,7 +41,6 @@ Route::group(["middleware" => "auth"], function() {
   Route::get('/profile','UsersController@profile');
   Route::post('/profile/update','UsersController@profileUpdate');
 
-  // edit, deleteは直接URL入力してもできないようしたいけど、特に実装は不要
   Route::post('post/update', 'PostsController@update');
 
   Route::get('post/{id}/delete', 'PostsController@delete');
