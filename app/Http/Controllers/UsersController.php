@@ -36,6 +36,7 @@ class UsersController extends Controller
 
     public function searchResult(Request $request){
         $keyword = $request->input('keyword');
+        // dd($keyword); // これは意図した通り
         $query = User::query();
         if(!empty($keyword)){
             $query->where('username', 'LIKE', "%{$keyword}%");
