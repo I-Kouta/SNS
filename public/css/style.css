@@ -280,3 +280,8 @@ button{
     align-items: center;
     justify-content: space-between;
 }
+
+.search-word{
+    font-size: 20px;
+    margin: 40px auto auto 20px;
+}
