@@ -14,7 +14,7 @@
   @foreach ($user as $user)
   @if(Auth::id() != $user->id)
   <div class="search-info">
-    <div>{{ $user->username }}</div>
+    {{ $user->username }}
     <button type="submit" class="red-btn">フォロー</button>
   </div>
   @endif
