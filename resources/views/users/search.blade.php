@@ -19,9 +19,9 @@
   <div class="search-info">
     {{ $user->username }}
     <!-- フォローしていなければ -->
-    <button type="submit" class="blue-btn">フォローする</button>
+    <a class="blue-btn">フォローする</a>
     <!-- フォローしていたら -->
-    <button type="submit" class="red-btn">フォロー解除</button>
+    <a class="red-btn">フォロー解除</a>
     <!-- end -->
   </div>
   @endif
