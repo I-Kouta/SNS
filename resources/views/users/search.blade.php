@@ -18,7 +18,7 @@
   @if(Auth::id() != $user->id)
   <div class="search-info">
     {{ $user->username }}
-    <button type="submit" class="red-btn">フォローする</button>
+    <button type="submit" class="blue-btn">フォローする</button>
     <button type="submit" class="red-btn">フォロー解除</button>
   </div>
   @endif
