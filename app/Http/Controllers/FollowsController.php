@@ -8,11 +8,11 @@ class FollowsController extends Controller
 {
     //
     public function follow(){
-        return view('users.search');
+        return redirect('/search');
     }
 
     public function unFollow(){
-        return view('users.search');
+        return redirect('/search');
     }
 
 
