@@ -21,7 +21,7 @@
     <!-- フォローしていなければ -->
     <a class="blue-btn" href="/{{$user->id}}/follow">フォローする</a>
     <!-- フォローしていたら -->
-    <a class="red-btn">フォロー解除</a>
+    <a class="red-btn" href="/{{$user->id}}/unFollow">フォロー解除</a>
     <!-- end -->
   </div>
   @endif

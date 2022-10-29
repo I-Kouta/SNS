@@ -11,6 +11,10 @@ class FollowsController extends Controller
         return view('users.search');
     }
 
+    public function unFollow(){
+        return view('users.search');
+    }
+
 
     public function followList(){
         return view('follows.followList');
