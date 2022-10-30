@@ -19,9 +19,9 @@
   <div class="search-info">
     {{ $user->username }}
     <!-- フォローしていなければ -->
-    <a class="blue-btn" href="/{{$user->id}}/follow">フォローする</a>
+    <p class="follow-btn"><a href="/{{$user->id}}/follow">フォローする</a></p>
     <!-- フォローしていたら -->
-    <a class="red-btn" href="/{{$user->id}}/unFollow">フォロー解除</a>
+    <p class="unFollow-btn"><a href="/{{$user->id}}/unFollow">フォロー解除</a></p>
     <!-- end -->
   </div>
   @endif

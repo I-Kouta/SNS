@@ -276,6 +276,7 @@ button{
 }
 
 .search-info{
+    height: 10vh;
     display: flex;
     align-items: center;
 }
@@ -285,13 +286,28 @@ button{
     margin: 40px auto auto 20px;
 }
 
-.blue-btn {
-    margin: 20px 25% auto 25%;
-    color: #f5f5f5;
+.follow-btn {
     font-size: 20px;
     background-color: #00bfff;
-    border-style: none;
-    padding: 10px 30px;
+    padding: 10px 0;
     border-radius: 10px;
     cursor: pointer;
+    width: 50%;
+    text-align: center;
+    margin-left: 80px;
+}
+
+.follow-btn a, .unFollow-btn a{
+    color: #f5f5f5;
+}
+
+.unFollow-btn{
+    font-size: 20px;
+    background-color: #dc143c;
+    padding: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    margin-left: 80px;
 }
