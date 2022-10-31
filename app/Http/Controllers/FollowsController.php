@@ -18,8 +18,11 @@ class FollowsController extends Controller
         return redirect('/search');
     }
 
-    public function unFollow(){
+    public function unFollow($id){
         // followsテーブルから削除する記述
+        \DB::table('follows')
+        ->where('id', $id)
+        ->delete();
         return redirect('/search');
     }
 
