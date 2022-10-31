@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 class FollowsController extends Controller
 {
     //
-    public function follow(){
+    public function follow($id){
         // followsテーブルに追加する記述
+        dd($id);
         return redirect('/search');
     }
 

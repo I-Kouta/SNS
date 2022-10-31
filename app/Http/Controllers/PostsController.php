@@ -45,7 +45,6 @@ class PostsController extends Controller
         \DB::table('posts')
         ->where('id', $id)
         ->delete();
-
         return redirect('/top');
     }
 
