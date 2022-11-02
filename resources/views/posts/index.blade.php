@@ -33,7 +33,6 @@
             {!! Form::close() !!}
           </div>
         </div>
-        <!-- 編集内容が表示される -->
         <a href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')"><img src="images/trash.png" width="30" height="30"></a>
       </div>
       @endif
