@@ -11,6 +11,7 @@ class FollowsController extends Controller
     //
     public function follow(User $user){
         // followsテーブルに追加する記述
+        // dd($user); // ここには格納されている
         $follower = auth()->user();
         // フォローしているか
         $is_following = $follower->isFollowing($user->id);

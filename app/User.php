@@ -26,8 +26,9 @@ class User extends Authenticatable
     }
 
     // フォローしているか
-   public function isFollowing(Int $user_id)
+   public function isFollowing($user_id)
    {
+        // dd($user_id); // 引数のIntを除外して確認。nullでした
         return (boolean) $this->follows()->where('followed_id', $user_id)->first(['id']);
    }
 
