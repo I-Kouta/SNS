@@ -14,9 +14,9 @@ class User extends Authenticatable
     }
 
     // フォロワー → フォロー
-    public function followUsers()
+    public function follow(Int $user_id)
     {
-        return $this->belongsToMany('App\User', 'follows', 'followed_id', 'following_id');
+        return $this->follows()->attach($user_id);
     }
 
     // フォロー → フォロワー
@@ -24,6 +24,18 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\User', 'follows', 'following_id', 'followed_id');
     }
+
+    // フォローしているか
+   public function isFollowing(Int $user_id)
+   {
+       return (boolean) $this->follows()->where('followed_id', $user_id)->first(['id']);
+   }
+
+   // フォローされているか
+   public function isFollowed($user_id)
+   {
+       return (boolean) $this->followers()->where('following_id', $user_id)->first(['id']);
+   }
 
     /**
      * The attributes that are mass assignable.
