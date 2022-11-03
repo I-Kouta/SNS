@@ -4,18 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class FollowsController extends Controller
 {
     //
-    public function follow($id){
+    public function follow(User $user){
         // followsテーブルに追加する記述
-        $user_id = Auth::id();
-        \DB::table('follows')->insert([
-            'following_id' => $user_id,
-            'followed_id' => $id
-        ]);
-        return redirect('/search');
+        $follower = auth()->user();
+        // フォローしているか
+        $is_following = $follower->isFollowing($user->id);
+        if(!$is_following) {
+           // フォローしていなければフォローする
+           $follower->follow($user->id);
+           return redirect('/search');
+        }
     }
 
     public function unFollow($id){
