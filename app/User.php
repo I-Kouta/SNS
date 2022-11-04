@@ -20,7 +20,7 @@ class User extends Authenticatable
     }
 
     // フォロー解除
-    public function unfollow(Int $user_id)
+    public function unFollow(Int $user_id)
     {
         return $this->follows()->detach($user_id);
     }

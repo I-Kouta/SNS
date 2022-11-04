@@ -22,12 +22,15 @@ class FollowsController extends Controller
         }
     }
 
-    public function unFollow($id){
-        // followsテーブルから削除する記述
-        \DB::table('follows')
-        ->where('followed_id', $id)
-        ->delete();
-        return redirect('/search');
+    public function unFollow(User $user){
+        $follower = auth()->user();
+        // フォローしているか
+        $is_following = $follower->isFollowing($user->id);
+        if(!$is_following) {
+           // フォローしていればフォロー解除
+           $follower->unFollow($user->id);
+           return redirect('/search');
+        }
     }
 
 
