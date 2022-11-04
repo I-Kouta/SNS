@@ -20,9 +20,9 @@ class User extends Authenticatable
     }
 
     // フォロー解除
-    public function follows()
+    public function unfollow(Int $user_id)
     {
-        return $this->belongsToMany('App\User', 'follows', 'following_id', 'followed_id');
+        return $this->follows()->detach($user_id);
     }
 
     // フォローしているか
