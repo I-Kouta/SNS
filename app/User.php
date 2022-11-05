@@ -25,18 +25,30 @@ class User extends Authenticatable
         return $this->follows()->detach($user_id);
     }
 
-    // フォローしているか
-   public function isFollowing($user_id)
-   {
-        // dd($user_id); // 引数のIntを除外して確認。nullでした
-        return (boolean) $this->follows()->where('followed_id', $user_id)->first(['id']);
-   }
+    // フォローする時
+    public function follows()
+    {
+        return $this->belongsToMany('App\User', 'follows', 'followed_id', 'following_id');
+    }
 
-   // フォローされているか
-   public function isFollowed($user_id)
-   {
+    // フォローされる時
+    public function followers()
+    {
+        return $this->belongsToMany('App\User', 'follows', 'followed_id', 'following_id');
+    }
+
+    // フォローする
+    public function isFollowing($user_id)
+    {
+        // dd($user_id); // 引数のIntを除外して確認。nullでした
+        return (boolean) $this->follows()->where('followed_id', $user_id)->first(['follow.id']);
+    }
+
+    // フォローされる
+    public function isFollowed($user_id)
+    {
         return (boolean) $this->followers()->where('following_id', $user_id)->first(['id']);
-   }
+    }
 
     /**
      * The attributes that are mass assignable.
