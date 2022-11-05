@@ -28,7 +28,7 @@ class User extends Authenticatable
     // フォローする時
     public function follows()
     {
-        return $this->belongsToMany('App\User', 'follows', 'followed_id', 'following_id');
+        return $this->belongsToMany('App\User', 'follows', 'following_id', 'followed_id');
     }
 
     // フォローされる時
