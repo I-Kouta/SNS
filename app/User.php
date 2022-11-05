@@ -41,7 +41,7 @@ class User extends Authenticatable
     public function isFollowing($user_id)
     {
         // dd($user_id); // 引数のIntを除外して確認。nullでした
-        return (boolean) $this->follows()->where('followed_id', $user_id)->first(['follow.id']);
+        return (boolean) $this->follows()->where('followed_id', $user_id)->first(['id']);
     }
 
     // フォローされる
