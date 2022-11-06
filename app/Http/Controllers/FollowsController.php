@@ -16,9 +16,11 @@ class FollowsController extends Controller
         // フォローしているか
         $is_following = $follower->isFollowing($user->id);
         if(!$is_following) {
-           // フォローしていなければフォローする
+            // フォローしていなければフォローする
+            // dd($is_following); // false
+            // dd($follower); // 格納されている
            $follower->follow($user->id);
-           return redirect('/search');
+           return back();
         }
     }
 
@@ -29,7 +31,7 @@ class FollowsController extends Controller
         if(!$is_following) {
            // フォローしていればフォロー解除
            $follower->unFollow($user->id);
-           return redirect('/search');
+           return back();
         }
     }
 
