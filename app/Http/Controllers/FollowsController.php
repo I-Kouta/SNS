@@ -20,7 +20,7 @@ class FollowsController extends Controller
             // dd($is_following); // false
             // dd($follower); // 格納されている
            $follower->follow($id);
-           return back();
+           return redirect('/search');
         }
     }
 
@@ -28,11 +28,12 @@ class FollowsController extends Controller
         $follower = auth()->user();
         // フォローしているか
         $is_following = $follower->isFollowing($id);
-        if(!$is_following) {
+        if($is_following) {
            // フォローしていればフォロー解除
            $follower->unFollow($id);
-           return back();
+           return redirect('/search');
         }
+
     }
 
 
