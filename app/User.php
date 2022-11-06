@@ -16,7 +16,6 @@ class User extends Authenticatable
     // フォローする
     public function follow($id)
     {
-        // dd($user_id); // null
         return $this->follows()->attach($id);
     }
 

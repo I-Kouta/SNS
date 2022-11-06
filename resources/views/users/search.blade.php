@@ -18,13 +18,10 @@
   @if(Auth::id() != $user->id)
   <div class="search-info">
     {{ $user->username }}
-    <!-- フォローしていなければ -->
     @if (auth()->user()->isFollowing($user->id))
     <p class="unFollow-btn"><a href="/{{$user->id}}/unFollow">フォロー解除</a></p>
-    <!-- フォローしていたら -->
     @else
     <p class="follow-btn"><a href="/{{$user->id}}/follow">フォローする</a></p>
-    <!-- end -->
     @endif
   </div>
   @endif
