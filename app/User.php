@@ -14,8 +14,9 @@ class User extends Authenticatable
     }
 
     // フォローする
-    public function follow(Int $user_id)
+    public function follow($user_id)
     {
+        // dd($user_id); // null
         return $this->follows()->attach($user_id);
     }
 
@@ -41,7 +42,7 @@ class User extends Authenticatable
     public function isFollowing($user_id)
     {
         // dd($user_id); // 引数のIntを除外して確認。nullでした
-        return (boolean) $this->follows()->where('followed_id', $user_id)->first(['id']);
+        return (boolean) $this->follows()->where('followed_id', $user_id)->first(['follows.id']);
     }
 
     // フォローされる
