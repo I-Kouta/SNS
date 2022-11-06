@@ -38,14 +38,14 @@ class User extends Authenticatable
         return $this->belongsToMany('App\User', 'follows', 'followed_id', 'following_id');
     }
 
-    // フォローしているか
+    // フォローする
     public function isFollowing($user_id)
     {
         // dd($user_id); // 引数のIntを除外して確認。nullでした
         return (boolean) $this->follows()->where('followed_id', $user_id)->first(['follows.id']);
     }
 
-    // フォローされているか
+    // フォローされる
     public function isFollowed($user_id)
     {
         return (boolean) $this->followers()->where('following_id', $user_id)->first(['follows.id']);
