@@ -37,13 +37,12 @@ class FollowsController extends Controller
     }
 
     public function followList(){
-        $user = \DB::table('users')->get();
         $list = \DB::table('posts')
         ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
         ->join('users', 'posts.user_id', '=', 'users.id')
         ->orderBy('created_at', 'desc')
         ->get();
-        return view('follows.followList',['list'=>$list, 'user'=>$user]);
+        return view('follows.followList',['list'=>$list]);
     }
 
     public function followerList(){
