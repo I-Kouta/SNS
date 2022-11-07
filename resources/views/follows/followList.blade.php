@@ -6,6 +6,7 @@
   <div>Follow List</div>
 {!! Form::close() !!}
 
+<!-- フォローしているユーザーのみ表示させたい -->
 @foreach ($list as $list)
 <div class="list">
   <div class="left-list">
@@ -35,5 +36,6 @@
   </div>
 </div>
 @endforeach
+<!-- endif -->
 
 @endsection
