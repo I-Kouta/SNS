@@ -7,7 +7,7 @@
 {!! Form::close() !!}
 
 <!-- フォローしているユーザーのみ表示させたい -->
-@foreach ($list as $list)
+@foreach ($lists as $list)
 <div class="list">
   <div class="left-list">
     <div>{{ $list->user_name }}</div>
