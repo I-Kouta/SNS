@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Post;
 
 class FollowsController extends Controller
 {
@@ -37,12 +38,10 @@ class FollowsController extends Controller
     }
 
     public function followList(){
-        $list = \DB::table('posts')
-        ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
-        ->join('users', 'posts.user_id', '=', 'users.id')
-        ->orderBy('created_at', 'desc')
-        ->get();
-        return view('follows.followList',['list'=>$list]);
+        $lists = Post::query()->whereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get();
+        return view('follows.FollowList')->with([
+            'lists' => $lists,
+        ]);
     }
 
     public function followerList(){
