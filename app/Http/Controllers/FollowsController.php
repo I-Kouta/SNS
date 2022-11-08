@@ -38,7 +38,13 @@ class FollowsController extends Controller
     }
 
     public function followList(){
-        $lists = Post::query()->whereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get();
+        // Postモデル内のuser_idがフォローしているユーザーを最新順に取得
+        $lists = Post::query()
+        ->whereIn('user_id', Auth::user()
+        ->follows()
+        ->pluck('followed_id'))
+        ->latest()
+        ->get();
         return view('follows.FollowList')->with([
             'lists' => $lists,
         ]);
