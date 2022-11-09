@@ -38,7 +38,7 @@ class FollowsController extends Controller
     }
 
     public function followList(){
-        // Postモデル内のuser_idがフォローしているユーザーを最新順に取得
+        // 誰を(followed_id)フォローしているか
         $lists = Post::query()
         ->whereIn('user_id', Auth::user()
         ->follows()
@@ -53,6 +53,7 @@ class FollowsController extends Controller
     }
 
     public function followerList(){
+        // 誰が(following_id)自分をフォローしているか
         $lists = Post::query()
         ->whereIn('user_id', Auth::user()
         ->followers()
