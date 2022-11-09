@@ -2,9 +2,7 @@
 
 @section('content')
 
-{!! Form::open(['url' => 'post/create','class' => 'post-form']) !!}
-  <div>Follow List</div>
-{!! Form::close() !!}
+<div class="post-form">Follow List</div>
 
 <!-- フォローしているユーザーのみ表示させたい -->
 @foreach ($lists as $list)
