@@ -61,7 +61,7 @@ class FollowsController extends Controller
         ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
         ->join('users', 'posts.user_id', '=', 'users.id')
         ->get();
-        return view('follows.FollowList')->with([
+        return view('follows.FollowerList')->with([
             'lists' => $lists,
         ]);
     }
