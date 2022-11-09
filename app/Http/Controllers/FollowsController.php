@@ -44,6 +44,8 @@ class FollowsController extends Controller
         ->follows()
         ->pluck('followed_id'))
         ->latest()
+        ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
+        ->join('users', 'posts.user_id', '=', 'users.id')
         ->get();
         return view('follows.FollowList')->with([
             'lists' => $lists,
@@ -51,6 +53,16 @@ class FollowsController extends Controller
     }
 
     public function followerList(){
-        return view('follows.followerList');
+        $lists = Post::query()
+        ->whereIn('user_id', Auth::user()
+        ->follows()
+        ->pluck('followed_id'))
+        ->latest()
+        ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
+        ->join('users', 'posts.user_id', '=', 'users.id')
+        ->get();
+        return view('follows.FollowList')->with([
+            'lists' => $lists,
+        ]);
     }
 }
