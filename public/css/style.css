@@ -215,11 +215,15 @@ button{
 }
 
 .left-list{
+    display: flex;
     font-size: 15px;
     height: 5vh;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
+}
+
+.post-message{
+    margin-left: 30px;
 }
 
 .right-list{
