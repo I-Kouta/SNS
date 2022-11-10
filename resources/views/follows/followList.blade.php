@@ -3,12 +3,11 @@
 @section('content')
 
 <div class="post-form">Follow List</div>
-
 <!-- フォローしているユーザーのみ表示させたい -->
 @foreach ($lists as $list)
 <div class="list">
   <div class="left-list">
-    <a href="/top">
+    <a href="/{{$list->user_id}}/profile">
       <img class="form-icon" src="images/icon1.png" width="35" height="35">
     </a>
     <div class="post-message">

@@ -54,5 +54,7 @@ Route::group(["middleware" => "auth"], function() {
   Route::get('/follow-list','FollowsController@followList');
   Route::get('/follower-list','FollowsController@followerList');
 
+  Route::get('/{id}/profile','FollowsController@followProfile');
+
   Route::get('/logout','Auth\LoginController@logout');
 });
