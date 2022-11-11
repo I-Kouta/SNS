@@ -66,8 +66,4 @@ class FollowsController extends Controller
             'lists' => $lists,
         ]);
     }
-
-    public function followProfile(){
-        return redirect('/top');
-    }
 }

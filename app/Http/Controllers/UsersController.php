@@ -9,6 +9,10 @@ use App\User;
 class UsersController extends Controller
 {
     //
+    public function userProfile(){
+        return redirect('/top');
+    }
+
     public function profile(){
         return view('users.profile');
     }

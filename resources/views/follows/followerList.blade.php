@@ -7,7 +7,7 @@
 @foreach ($lists as $list)
 <div class="list">
   <div class="left-list">
-    <a href="/{{$list->user_id}}/profile">
+    <a href="/user/{{$list->user_id}}/profile">
       <img class="form-icon" src="images/icon1.png" width="35" height="35">
     </a>
     <div class="post-message">
