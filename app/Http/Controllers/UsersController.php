@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     //
     public function userProfile(){
-        return redirect('/top');
+        return view('users.usersProfile');
     }
 
     public function profile(){
