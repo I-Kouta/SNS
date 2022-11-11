@@ -10,7 +10,8 @@ class UsersController extends Controller
 {
     //
     public function userProfile(){
-        return view('users.usersProfile');
+        $user = \DB::table('users')->get();
+        return view('users.usersProfile',['user'=>$user]);
     }
 
     public function profile(){
