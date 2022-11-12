@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Post;
 
 class UsersController extends Controller
 {
     //
     public function userProfile($id){
-        $user = \DB::table('users')->where('id', $id)->get();
+        $user = User::where('id', $id)->get();
         // dd($user);
         return view('users.usersProfile',['user'=>$user]);
     }

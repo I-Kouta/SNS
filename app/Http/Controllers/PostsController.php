@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\User;
+use App\Post;
+
 class PostsController extends Controller
 {
     //
     public function index(){
         // ここにログインしたユーザー情報を書く
-        $list = \DB::table('posts')
-        ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
+        $list = Post::
+        select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
         ->join('users', 'posts.user_id', '=', 'users.id')
         ->orderBy('created_at', 'desc')
         ->get();
