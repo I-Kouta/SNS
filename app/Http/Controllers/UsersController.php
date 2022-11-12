@@ -11,8 +11,9 @@ class UsersController extends Controller
 {
     //
     public function userProfile($id){
-        $user = User::where('id', $id)->get();
+        $user = Post::with('user')->where('user_id', $id)->get();
         // dd($user);
+        // $posts = $user->posts;
         return view('users.usersProfile',['user'=>$user]);
     }
 
