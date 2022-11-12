@@ -4,6 +4,7 @@
 
 @foreach ($user as $user)
 <div class="post-form">
+  <img class="form-icon" src="images/icon1.png" width="35" height="35">
   <div class="post-message">
     <div>name{{ $user->username }}</div>
     <div>bio{{ $user->bio }}</div>
