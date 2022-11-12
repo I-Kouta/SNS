@@ -2,15 +2,15 @@
 
 @section('content')
 
-@foreach ($user as $user)
 <div class="post-form">
-  <img class="form-icon" src="images/icon1.png" width="35" height="35">
+  <img class="form-icon" src=" {{ asset('images/icon1.png') }}" width="35" height="35">
   <div class="post-message">
-    <div>name{{ $user->username }}</div>
-    <div>bio{{ $user->bio }}</div>
+    @foreach ($user as $user)
+    <div>name{{ $user->user->username }}</div>
+    <div>bio{{ $user->user->bio }}</div>
+    @endforeach
   </div>
 </div>
-@endforeach
 
 <div class="list">
   <div class="left-list">
