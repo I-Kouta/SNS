@@ -9,8 +9,9 @@ use App\User;
 class UsersController extends Controller
 {
     //
-    public function userProfile(){
-        $user = \DB::table('users')->get();
+    public function userProfile($id){
+        $user = \DB::table('users')->where('id', $id)->get();
+        // dd($user);
         return view('users.usersProfile',['user'=>$user]);
     }
 
