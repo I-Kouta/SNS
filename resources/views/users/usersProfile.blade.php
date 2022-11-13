@@ -6,8 +6,8 @@
 <div class="post-form">
   <img class="form-icon" src=" {{ asset('images/icon1.png') }}" width="35" height="35">
   <div class="post-message">
-    <div>{{ $user->username }}</div>
-    <div>{{ $user->bio }}</div>
+    <div>name {{ $user->username }}</div>
+    <div>bio {{ $user->bio }}</div>
   </div>
 </div>
 @endforeach
