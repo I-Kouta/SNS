@@ -2,25 +2,27 @@
 
 @section('content')
 
+@foreach ($user as $user)
 <div class="post-form">
   <img class="form-icon" src=" {{ asset('images/icon1.png') }}" width="35" height="35">
   <div class="post-message">
-    <div>name</div>
-    <div>bio</div>
+    <div>{{ $user->username }}</div>
+    <div>{{ $user->bio }}</div>
   </div>
 </div>
+@endforeach
 
-@foreach ($user as $user)
+@foreach ($posts as $posts)
 <div class="list">
   <div class="left-list">
     <img class="form-icon" src=" {{ asset('images/icon1.png') }}" width="35" height="35">
     <div class="post-message">
-      <div>{{ $user->user->username }}</div>
-      <div>{{ $user->post }}</div>
+      <div>{{ $posts->user->username }}</div>
+      <div>{{ $posts->post }}</div>
     </div>
   </div>
   <div class="right-list">
-    <div>{{ $user->updated_at }}</div>
+    <div>{{ $posts->updated_at }}</div>
   </div>
 </div>
 @endforeach

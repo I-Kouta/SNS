@@ -11,10 +11,11 @@ class UsersController extends Controller
 {
     //
     public function userProfile($id){
-        $user = Post::with('user')->where('user_id', $id)->get();
+        $posts = Post::with('user')->where('user_id', $id)->get();
         // dd($user);
         // $posts = $user->posts;
-        return view('users.usersProfile',['user'=>$user]);
+        $user = \DB::table('users')->get();
+        return view('users.usersProfile',['posts'=>$posts, 'user'=>$user]);
     }
 
     public function profile(){
