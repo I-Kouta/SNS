@@ -23,7 +23,7 @@
     <div>{{ $list->updated_at }}</div>
     @if(Auth::id() == $list->user_id)
     <div class="update-edit">
-      <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a> <!-- これは編集ボタン -->
+      <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a>
       <!-- 編集内容が表示される -->
       <div class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
