@@ -13,6 +13,7 @@
 @foreach ($user as $user)
 <div class="list">
   <div class="left-list">
+    <img class="form-icon" src=" {{ asset('images/icon1.png') }}" width="35" height="35">
     <div class="post-message">
       <div>{{ $user->user->username }}</div>
       <div>投稿内容{{ $user->post }}</div>
