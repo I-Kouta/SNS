@@ -13,9 +13,7 @@ class PostsController extends Controller
     //
     public function index(){
         // ここにログインしたユーザー情報を書く
-        $list = Post::
-        select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
-        ->join('users', 'posts.user_id', '=', 'users.id')
+        $list = Post::with('user')
         ->orderBy('created_at', 'desc')
         ->get();
         return view('posts.index',['list'=>$list]);

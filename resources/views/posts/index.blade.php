@@ -15,7 +15,7 @@
   <div class="left-list">
     <img class="form-icon" src="images/icon1.png" width="35" height="35">
     <div class="post-message">
-      <div>{{ $list->user_name }}</div>
+      <div>{{ $list->user->username }}</div>
       <div>{{ $list->post }}</div>
     </div>
   </div>

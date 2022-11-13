@@ -10,10 +10,10 @@ $(function () {
 
   $('.js-modal-open').on('click', function () {
     $('.js-modal').fadeIn();
-    var post = $(this).attr('post'); // $post = と同義
     var post_id = $(this).attr('post_id');
-    $('.modal_post').text(post); // 投稿内容を取得
+    var post = $(this).attr('post'); // $post = と同義
     $('.modal_id').val(post_id); // 投稿に紐づいているidの取得
+    $('.modal_post').text(post); // 投稿内容を取得
     return false;
   });
 
