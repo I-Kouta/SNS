@@ -13,7 +13,7 @@ $(function () {
     var post_id = $(this).attr('post_id');
     var post = $(this).attr('post'); // $post = と同義
     $('.modal_id').val(post_id); // 投稿に紐づいているidの取得
-    $('.modal_post').text(post); // 投稿内容を取得
+    $('.modal_post').val(post); // 投稿内容を取得
     return false;
   });
 
