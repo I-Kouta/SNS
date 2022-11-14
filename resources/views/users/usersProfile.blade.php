@@ -9,6 +9,11 @@
     <div>name {{ $user->username }}</div>
     <div>bio {{ $user->bio }}</div>
   </div>
+  @if (auth()->user()->isFollowing($user->id))
+  <p class="unFollow-btn"><a href="/{{$user->id}}/unFollow">フォロー解除</a></p>
+  @else
+  <p class="follow-btn"><a href="/{{$user->id}}/follow">フォローする</a></p>
+  @endif
 </div>
 @endforeach
 
