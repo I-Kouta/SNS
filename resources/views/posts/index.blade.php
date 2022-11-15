@@ -11,6 +11,7 @@
 {!! Form::close() !!}
 
 @foreach ($list as $list)
+@if (auth()->user()->isFollowing($list->user->id) or (Auth::id() == $list->user->id))
 <div class="list">
   <div class="left-list">
     <img class="form-icon" src="images/icon1.png" width="35" height="35">
@@ -21,7 +22,7 @@
   </div>
   <div class="right-list">
     <div>{{ $list->updated_at }}</div>
-    @if(Auth::id() == $list->user_id)
+    @if(Auth::id() == $list->user->id)
     <div class="update-edit">
       <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="images/edit.png" width="30" height="30"></a>
       <!-- 編集内容が表示される -->
@@ -41,6 +42,7 @@
     @endif
   </div>
 </div>
+@endif
 @endforeach
 
 @endsection
