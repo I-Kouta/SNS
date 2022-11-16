@@ -12,7 +12,6 @@ class PostsController extends Controller
 {
     //
     public function index(){
-        // ここにログインしたユーザー情報を書く
         $list = Post::with('user')
         ->orderBy('updated_at', 'desc')
         ->get();
@@ -22,7 +21,6 @@ class PostsController extends Controller
     public function create(Request $request){
         $post = $request->input('newPost');
         $user_id = Auth::id();
-        // dd($post);
         \DB::table('posts')->insert([
             'user_id' => $user_id,
             'post' => $post

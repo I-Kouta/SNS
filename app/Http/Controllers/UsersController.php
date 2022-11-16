@@ -12,8 +12,6 @@ class UsersController extends Controller
     //
     public function userProfile($id){
         $posts = Post::with('user')->where('user_id', $id)->get();
-        // dd($user);
-        // $posts = $user->posts;
         $user = User::where('id', $id)->get();
         return view('users.usersProfile',['posts'=>$posts, 'user'=>$user]);
     }
@@ -45,7 +43,6 @@ class UsersController extends Controller
 
     public function searchResult(Request $request){
         $keyword = $request->input('keyword');
-        // dd($keyword); // これは意図した通り
         $query = User::query();
         if(!empty($keyword)){
             $query->where('username', 'LIKE', "%{$keyword}%");

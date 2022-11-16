@@ -12,20 +12,18 @@ class FollowsController extends Controller
     //
     public function follow($id){
         // followsテーブルに追加する記述
-        // dd($id); // ここには格納されている
         $follower = auth()->user();
         // フォローしているか
         $is_following = $follower->isFollowing($id);
         if(!$is_following) {
             // フォローしていなければフォローする
-            // dd($is_following); // false
-            // dd($follower); // 格納されている
-           $follower->follow($id);
-           return back();
+            $follower->follow($id);
+            return back();
         }
     }
 
     public function unFollow($id){
+        // followsテーブルから削除する記述
         $follower = auth()->user();
         // フォローしているか
         $is_following = $follower->isFollowing($id);
