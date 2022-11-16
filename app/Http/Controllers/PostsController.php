@@ -21,7 +21,7 @@ class PostsController extends Controller
     public function create(Request $request){
         $post = $request->input('newPost');
         $user_id = Auth::id();
-        \DB::table('posts')->insert([
+        Post::insert([
             'user_id' => $user_id,
             'post' => $post
         ]);
@@ -31,8 +31,8 @@ class PostsController extends Controller
     public function update(Request $request){
         $id = $request->input('id');
         $up_post = $request->input('upPost');
-        \DB::table('posts')
-        ->where('id', $id)
+        Post::
+        where('id', $id)
         ->update(
             ['post' => $up_post]
         );
@@ -40,8 +40,8 @@ class PostsController extends Controller
     }
 
     public function delete($id){
-        \DB::table('posts')
-        ->where('id', $id)
+        Post::
+        where('id', $id)
         ->delete();
         return redirect('/top');
     }
