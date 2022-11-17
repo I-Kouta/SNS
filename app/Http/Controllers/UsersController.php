@@ -16,8 +16,9 @@ class UsersController extends Controller
         return view('users.usersProfile',['posts'=>$posts, 'user'=>$user]);
     }
 
-    public function profile(){
-        return view('users.profile');
+    public function profile($id){
+        $user = User::where('id', $id)->get();
+        return view('users.profile',['user'=>$user]);
     }
 
     public function profileUpdate(Request $request){
