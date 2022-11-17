@@ -17,6 +17,10 @@ header{
     justify-content: space-between;
 }
 
+h1{
+    margin-top: 10px;
+}
+
 .user-image{
     margin-left: 5%;
     width: 25px;
