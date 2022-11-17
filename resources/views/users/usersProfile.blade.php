@@ -6,8 +6,14 @@
 <div class="post-form">
   <img class="form-icon" src=" {{ asset('images/icon1.png') }}" width="35" height="35">
   <div class="post-message">
-    <div>name {{ $user->username }}</div>
-    <div>bio {{ $user->bio }}</div>
+
+      <div class="profile-info">
+        name {{ $user->username }}
+      </div>
+      <div class="profile-info">
+        bio {{ $user->bio }}
+      </div>
+
   </div>
   @if (auth()->user()->isFollowing($user->id))
   <p class="unFollow-btn"><a href="/{{$user->id}}/unFollow">フォロー解除</a></p>
