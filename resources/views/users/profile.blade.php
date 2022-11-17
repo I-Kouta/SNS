@@ -2,17 +2,18 @@
 
 @section('content')
 
-<img class="user-image profile-icon" src="images/icon1.png">
+@foreach ($user as $user)
+<img class="user-image profile-icon" src="{{ asset('images/icon1.png') }}">
 {!! Form::open(['url' => '/profile/update','class' => 'profile-top']) !!}
 
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
-  {{ Form::text('username',Auth::user()->username,['class' => 'output']) }}
+  {{ Form::text('username', $user->username,['class' => 'output']) }}
 </div>
 
 <div class="category">
   {{ Form::label('address', 'mail address', ['class' => 'address']) }}
-  {{ Form::text('mail',Auth::user()->mail,['class' => 'output']) }}
+  {{ Form::text('mail', $user->mail,['class' => 'output']) }}
 </div>
 
 <div class="category">
@@ -27,13 +28,15 @@
 
 <div class="category">
   {{ Form::label('bio', 'bio', ['class' => 'bio']) }}
-  {{ Form::password('password_confirmation',['class' => 'output']) }}
+  {{ Form::text('mail', $user->bio,['class' => 'output']) }}
 </div>
 
 <div class="category">
   {{ Form::label('icon-image', 'icon image', ['class' => 'icon-image']) }}
   {{ Form::file('image', ['class' => 'output file']) }}
 </div>
+
+@endforeach
 
 {{ Form::submit('更新',['class' => 'red-btn']) }}
 
