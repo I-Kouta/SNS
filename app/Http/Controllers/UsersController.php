@@ -26,15 +26,14 @@ class UsersController extends Controller
         $up_username = $request->input('upUserName');
         $up_mail = $request->input('upMail');
         $up_bio = $request->input('upBio');
-        dd($up_bio);
         User::
         where('id', $id)
         ->update(
-            ['' => $up_username],
-            ['' => $up_mail],
-            ['' => $up_bio]
+            ['username' => $up_username],
+            ['mail' => $up_mail],
+            ['bio' => $up_bio]
         );
-        return view('users.profile'); // 留まる
+        return redirect('/top');
     }
 
     public function search(){
