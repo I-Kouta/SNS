@@ -22,18 +22,18 @@ class UsersController extends Controller
     }
 
     public function profileUpdate(Request $request){
-        if($request->isMethod('post')){
-            $up_user = $request->input('upUser');
-            $request->validate([
-                'username' => 'required|string|min:2|max:12',
-                'mail' => 'required|string|email|min:5|max:40|unique:users',
-                'password' => 'required|string|min:8|max:20|confirmed'
-            ]);
-            \DB::table('users')->insert([
-                'user' => $user
-            ]);
-            return redirect('/top'); // トップに移動する、正常に処理が完了
-        }
+        $id = $request->input('id');
+        $up_username = $request->input('upUserName');
+        $up_mail = $request->input('upMail');
+        $up_bio = $request->input('upBio');
+        dd($up_bio);
+        User::
+        where('id', $id)
+        ->update(
+            ['' => $up_username],
+            ['' => $up_mail],
+            ['' => $up_bio]
+        );
         return view('users.profile'); // 留まる
     }
 
