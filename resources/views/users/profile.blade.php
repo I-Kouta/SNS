@@ -14,7 +14,7 @@
 
 <div class="category">
   {{ Form::label('address', 'mail address', ['class' => 'address']) }}
-  {{ Form::input('mail', 'upMail', $user->mail,['class' => 'output']) }}
+  {{ Form::input('mail', 'upMail', $user->mail,['required', 'class' => 'output', 'minlength' => '5', 'maxlength' => '40']) }}
 </div>
 
 <div class="category">
