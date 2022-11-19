@@ -9,7 +9,7 @@
 {!! Form::hidden('id', $user->id) !!}
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
-  {{ Form::input('username', 'upUserName', $user->username,['class' => 'output']) }}
+  {{ Form::input('username', 'upUserName', $user->username,['required','class' => 'output', 'minlength' => '2', 'maxlength' => '12']) }}
 </div>
 
 <div class="category">
@@ -29,7 +29,7 @@
 
 <div class="category">
   {{ Form::label('bio', 'bio', ['class' => 'bio']) }}
-  {{ Form::input('mail', 'upBio', $user->bio,['class' => 'output']) }}
+  {{ Form::input('bio', 'upBio', $user->bio,['class' => 'output']) }}
 </div>
 
 <div class="category">
