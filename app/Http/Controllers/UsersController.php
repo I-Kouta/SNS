@@ -29,9 +29,9 @@ class UsersController extends Controller
         User::
         where('id', $id)
         ->update(
-            ['username' => $up_username],
-            ['mail' => $up_mail],
-            ['bio' => $up_bio]
+            ['username' => $up_username,
+            'mail' => $up_mail,
+            'bio' => $up_bio]
         );
         return redirect('/top');
     }
