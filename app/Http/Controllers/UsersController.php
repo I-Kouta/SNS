@@ -26,6 +26,10 @@ class UsersController extends Controller
         $up_username = $request->input('upUserName');
         $up_mail = $request->input('upMail');
         $up_bio = $request->input('upBio');
+        $request->validate([
+            'username' => 'required|string|min:2|max:12',
+            'mail' => 'required|string|email|min:5|max:40|unique:users',
+        ]);
         User::
         where('id', $id)
         ->update(
