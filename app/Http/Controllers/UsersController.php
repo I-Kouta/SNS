@@ -26,8 +26,7 @@ class UsersController extends Controller
         $up_username = $request->input('upUserName');
         $up_mail = $request->input('upMail');
         $up_bio = $request->input('upBio');
-        User::
-        where('id', $id)
+        User::where('id', $id)
         ->update(
             ['username' => $up_username,
             'mail' => $up_mail,

@@ -9,12 +9,12 @@
 {!! Form::hidden('id', $user->id) !!}
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
-  {{ Form::input('username', 'upUserName', $user->username,['required','class' => 'output', 'minlength' => '2', 'maxlength' => '12']) }}
+  {{ Form::input('username', 'upUserName', $user->username,['class' => 'output']) }}
 </div>
 
 <div class="category">
   {{ Form::label('address', 'mail address', ['class' => 'address']) }}
-  {{ Form::input('mail', 'upMail', $user->mail,['required', 'class' => 'output', 'minlength' => '5', 'maxlength' => '40']) }}
+  {{ Form::input('mail', 'upMail', $user->mail,['class' => 'output']) }}
 </div>
 
 <div class="category">
