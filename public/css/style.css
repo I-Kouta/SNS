@@ -265,9 +265,10 @@ button{
 }
 
 .modal_post{
-    width: 300px;
+    width: 400px;
     height: 100px;
     font-size: 15px;
+    border: #696969 solid 1px;
 }
 
 /* 検索フォーム */
