@@ -260,14 +260,14 @@ button{
     position: absolute;
     background-color: #ffffff;
     margin: 25%;
-    padding: 50px;
+    padding: 40px 20px 80px;
     border-radius: 10px;
 }
 
 .modal_post{
     position: relative;
-    width: 400px;
-    height: 100px;
+    width: 450px;
+    height: 150px;
     font-size: 15px;
     border: #696969 solid 1px;
 }
