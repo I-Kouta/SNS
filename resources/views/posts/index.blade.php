@@ -30,7 +30,7 @@
           {!! Form::open(['url' => '/post/update']) !!}
           {!! Form::hidden('id', $list->id, ['class' => 'modal_id']) !!}
           {!! Form::input('text', 'upPost', $list->post, ['required', 'class' => 'modal_post']) !!}
-          <button type="submit"><img src="images/edit.png" width="30" height="30"></button>
+          <button type="submit"><img class="edit-btn" src="images/edit.png" width="30" height="30"></button>
           {{ csrf_field() }}
           {!! Form::close() !!}
         </div>
