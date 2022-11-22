@@ -313,7 +313,7 @@ button{
     width: 200px;
     height: 20px;
     text-align: center;
-    margin-left: 80px;
+    margin: auto 80px auto;
 }
 
 .follow-btn a, .unFollow-btn a{
@@ -329,7 +329,7 @@ button{
     width: 200px;
     height: 20px;
     text-align: center;
-    margin-left: 80px;
+    margin: auto 80px auto;
 }
 
 .profile-info{
