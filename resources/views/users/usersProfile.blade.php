@@ -5,13 +5,13 @@
 @foreach ($user as $user)
 <div class="post-form">
   <img class="form-icon" src=" {{ asset('images/icon1.png') }}" width="35" height="35">
-  <div class="post-message">
-    <div class="profile-info">
-      <div>name</div>
-      <div>{{ $user->username }}</div>
-    </div>
-    <div class="profile-info">
+  <div class="post-message prof-head">
+    <div class="prof-head-title">
+      <div class="under-margin">name</div>
       <div>bio</div>
+    </div>
+    <div class="">
+      <div class="under-margin">{{ $user->username }}</div>
       <div>{{ $user->bio }}</div>
     </div>
   </div>

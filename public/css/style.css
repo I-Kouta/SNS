@@ -332,9 +332,14 @@ button{
     margin: auto 80px auto;
 }
 
-.profile-info{
-    width: 40%;
-    margin-bottom: 2%;
+.prof-head{
     display: flex;
-    justify-content: space-between;
+}
+
+.prof-head-title{
+    margin-right: 30%;
+}
+
+.under-margin{
+    margin-bottom: 20px;
 }
