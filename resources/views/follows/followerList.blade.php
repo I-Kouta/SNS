@@ -11,7 +11,7 @@
       <img class="form-icon" src="images/icon1.png" width="35" height="35">
     </a>
     <div class="post-message">
-      <div>{{ $list->user_name }}</div>
+      <div class="under-margin">{{ $list->user_name }}</div>
       <div>{{ $list->post }}</div>
     </div>
   </div>
