@@ -28,9 +28,9 @@ class FollowsController extends Controller
         // フォローしているか
         $is_following = $follower->isFollowing($id);
         if($is_following) {
-           // フォローしていればフォロー解除
-           $follower->unFollow($id);
-           return back();
+            // フォローしていればフォロー解除
+            $follower->unFollow($id);
+            return back();
         }
 
     }
