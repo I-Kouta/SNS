@@ -6,6 +6,9 @@
 {!! Form::open(['class' => 'gray-back']) !!} <!-- HTMLのformの開始タグに相当 -->
 
 <h2>新規ユーザー登録</h2>
+@foreach ($errors->all() as $error)
+  <li>{{$error}}</li>
+@endforeach
 
 {{ Form::label('user-name', 'user name', ['class' => 'name']) }}<br /> <!-- 'for', '表記される' -->
 {{ Form::text('username',null,['class' => 'input', 'placeholder' => 'admin']) }}<br />

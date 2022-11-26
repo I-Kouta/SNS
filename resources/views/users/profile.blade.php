@@ -4,6 +4,9 @@
 
 @foreach ($user as $user)
 <img class="user-image profile-icon" src="{{ asset('images/icon1.png') }}">
+@foreach ($errors->all() as $error)
+  <li>{{$error}}</li>
+@endforeach
 
 {!! Form::open(['url' => '/profile/update','class' => 'profile-top']) !!}
 {!! Form::hidden('id', $user->id) !!}
