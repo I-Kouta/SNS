@@ -29,9 +29,11 @@ class UsersController extends Controller
             'mail' => 'required|string|email|min:5|max:40|unique:users',
             'password' => 'required|string|min:8|max:20|confirmed'
         ]);
-        // バリデーションがうまくいったら
+        // $this->update($data); ここで更新して
+        // if(バリデーションがうまくいったら){
         return redirect('/top');
-        // 失敗したら止まる
+        // ダメだったら}else{
+        // return view('users.profile'); // 遷移せずに止まる};
     }
 
     public function search(){
