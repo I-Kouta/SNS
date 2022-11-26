@@ -8,12 +8,12 @@
 {!! Form::open(['url' => '/profile/update','class' => 'profile-top']) !!}
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
-  {{ Form::input('username', 'UpUserName', $user->username,['class' => 'output']) }}
+  {{ Form::input('username', 'username', $user->username,['class' => 'output']) }}
 </div>
 
 <div class="category">
   {{ Form::label('address', 'mail address', ['class' => 'address']) }}
-  {{ Form::input('mail', 'UpMail', $user->mail,['class' => 'output']) }}
+  {{ Form::input('mail', 'mail', $user->mail,['class' => 'output']) }}
 </div>
 
 <div class="category">
@@ -28,7 +28,7 @@
 
 <div class="category">
   {{ Form::label('bio', 'bio', ['class' => 'bio']) }}
-  {{ Form::input('bio', 'UpBio', $user->bio,['class' => 'output']) }}
+  {{ Form::input('bio', 'bio', $user->bio,['class' => 'output']) }}
 </div>
 
 <div class="category">
