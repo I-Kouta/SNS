@@ -31,8 +31,7 @@ class PostsController extends Controller
     public function update(Request $request){
         $id = $request->input('id');
         $up_post = $request->input('upPost');
-        Post::
-        where('id', $id)
+        Post::where('id', $id)
         ->update(
             ['post' => $up_post]
         );
@@ -40,8 +39,7 @@ class PostsController extends Controller
     }
 
     public function delete($id){
-        Post::
-        where('id', $id)
+        Post::where('id', $id)
         ->delete();
         return redirect('/top');
     }
