@@ -22,17 +22,16 @@ class UsersController extends Controller
     }
 
     public function profileUpdate(Request $request){
-        if($request->isMethod('post')){
-            $data = $request->input(); // ここに入力したデータが入っている
-            // dd($data); // ここに記載したデータが入る
-            $request->validate([
-                'username' => 'required|string|min:2|max:12',
-                'mail' => 'required|string|email|min:5|max:40|unique:users',
-                'password' => 'required|string|min:8|max:20|confirmed'
-            ]);
-            return redirect('/top');
-        }
-        return view('users.profile');
+        $data = $request->input(); // ここに入力したデータが入っている
+        // dd($request['username']); // ここに記載したデータが入る
+        $request->validate([
+            'username' => 'required|string|min:2|max:12',
+            'mail' => 'required|string|email|min:5|max:40|unique:users',
+            'password' => 'required|string|min:8|max:20|confirmed'
+        ]);
+        // バリデーションがうまくいったら
+        return redirect('/top');
+        // 失敗したら止まる
     }
 
     public function search(){

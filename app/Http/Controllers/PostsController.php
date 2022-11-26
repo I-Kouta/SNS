@@ -43,5 +43,4 @@ class PostsController extends Controller
         ->delete();
         return redirect('/top');
     }
-
 }
