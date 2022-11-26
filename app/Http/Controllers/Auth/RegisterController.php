@@ -66,7 +66,7 @@ class RegisterController extends Controller
         return User::create([
             'username' => $data['username'],
             'mail' => $data['mail'],
-            'password' => bcrypt($data['password']),
+            'password' => bcrypt($data['password'])
         ]);
     }
 
@@ -84,7 +84,7 @@ class RegisterController extends Controller
                 'mail' => 'required|string|email|min:5|max:40|unique:users',
                 'password' => 'required|string|min:8|max:20|confirmed'
             ]);
-            $this->create($data); // ここで実際に登録作業を行っている
+            $this->create($data); // ここで実際に登録作業を行っている(64行目へ)
             $request->session()->put('username', $data['username']); // ここでセッションにusernameを保存する
             return redirect('added'); // ユーザー登録完了の画面、次へ進む
         }

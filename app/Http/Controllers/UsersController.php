@@ -22,19 +22,15 @@ class UsersController extends Controller
     }
 
     public function profileUpdate(Request $request){
-        $id = $request->input('id');
-        $up_UserName = $request->input('UpUserName');
-        $up_UpMail = $request->input('UpMail');
-        $up_UpBio = $request->input('UpBio');
-        // dd($request);
-        User::where('id', $id)
-        ->update(
-            ['username' => $up_UserName,
-            'mail' => $up_UpMail,
-            'bio' => $up_UpBio
-            ]
-        );
-        return redirect('/top');
+        if($request->isMethod('post')){
+            $data = $request->input(); // ここに入力したデータが入っている
+            $request->validate([
+                'username' => 'required|string|min:2|max:12',
+                'mail' => 'required|string|email|min:5|max:40|unique:users',
+                'password' => 'required|string|min:8|max:20|confirmed'
+            ]);
+        }
+        return view('users.profile');
     }
 
     public function search(){
