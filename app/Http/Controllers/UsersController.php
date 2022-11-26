@@ -23,10 +23,17 @@ class UsersController extends Controller
 
     public function profileUpdate(Request $request){
         $id = $request->input('id');
-        $data = $request->input();
-        dd($data);
+        $up_UserName = $request->input('UpUserName');
+        $up_UpMail = $request->input('UpMail');
+        $up_UpBio = $request->input('UpBio');
+        // dd($request);
         User::where('id', $id)
-        ->update($data);
+        ->update(
+            ['username' => $up_UserName,
+            'mail' => $up_UpMail,
+            'bio' => $up_UpBio
+            ]
+        );
         return redirect('/top');
     }
 
