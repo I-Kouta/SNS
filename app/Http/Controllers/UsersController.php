@@ -22,11 +22,9 @@ class UsersController extends Controller
     }
 
     public function profileUpdate(Request $request){
-        $user = \Auth::user();
         if($request->isMethod('post')){
             $data = $request->input(); // ここに入力したデータが入っている
-            $user->password = bcrypt($request->password);
-            // dd($request); // ここに記載したデータが入る
+            // dd($data); // ここに記載したデータが入る
             $request->validate([
                 'username' => 'required|string|min:2|max:12',
                 'mail' => 'required|string|email|min:5|max:40|unique:users',
