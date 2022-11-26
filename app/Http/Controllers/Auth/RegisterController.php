@@ -57,7 +57,7 @@ class RegisterController extends Controller
 
     /**
      * Create a new user instance after a valid registration.
-     *
+     * 作業者が分かるための説明
      * @param  array  $data
      * @return \App\User
      */
@@ -69,7 +69,6 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password'])
         ]);
     }
-
 
     // public function registerForm(){
     //     return view("auth.register");
