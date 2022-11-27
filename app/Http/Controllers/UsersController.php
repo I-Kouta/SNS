@@ -21,6 +21,15 @@ class UsersController extends Controller
         return view('users.profile',['user'=>$user]);
     }
 
+    protected function update(array $data)
+    {
+        return User::update([
+            'username' => $data['username'],
+            'mail' => $data['mail'],
+            'password' => bcrypt($data['password'])
+        ]);
+    }
+
     public function profileUpdate(Request $request){
         $data = $request->input(); // ここに入力したデータが入っている
         // dd($request['username']); // ここに記載したデータが入る
