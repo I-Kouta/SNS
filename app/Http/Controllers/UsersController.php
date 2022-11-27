@@ -35,7 +35,7 @@ class UsersController extends Controller
         // dd($request['username']); // ここに記載したデータが入る
         $request->validate([
             'username' => 'required|string|min:2|max:12',
-            'mail' => 'required|string|email|min:5|max:40|unique:users',
+            'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$request->id.',id',
             'password' => 'required|string|min:8|max:20|confirmed'
         ]);
         // $this->update($data); ここで更新して
