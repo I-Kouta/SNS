@@ -114,7 +114,10 @@ h1{
 
 .follow-count{
     display: flex;
-    justify-content: space-around;
+}
+
+.follow-title{
+    margin-right: 40px;
 }
 
 .btn{
