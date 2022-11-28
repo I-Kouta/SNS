@@ -35,12 +35,14 @@ class UsersController extends Controller
 
     public function profileUpdate(Request $request){
         $data = $request->input(); // ここに入力したデータが入っている
+        // $image = $request->file('iconimage')->store('public/images'); // 画像の登録
         // dd($request['username']); // ここに記載したデータが入る
         $request->validate([
             'username' => 'required|string|min:2|max:12',
             'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$request->id.',id',
             'password' => 'required|string|min:8|max:20|confirmed',
-            'bio' => 'max:150'
+            'bio' => 'max:150' // ,
+            // 'image' => 'image'
         ]);
         $this->update($data); // ここで更新して
         return redirect('/top');
