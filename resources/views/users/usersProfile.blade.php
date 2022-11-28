@@ -10,7 +10,7 @@
       <div class="under-margin">name</div>
       <div>bio</div>
     </div>
-    <div class="">
+    <div>
       <div class="under-margin">{{ $user->username }}</div>
       <div>{{ $user->bio }}</div>
     </div>
