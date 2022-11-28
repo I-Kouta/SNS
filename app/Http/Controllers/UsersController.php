@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\User;
 use App\Post;
@@ -23,9 +24,11 @@ class UsersController extends Controller
 
     protected function update(array $data)
     {
-        return User::update([
+        $user_id = Auth::id();
+        return User::where('id', $user_id)->update([
             'username' => $data['username'],
             'mail' => $data['mail'],
+            'bio' => $data['bio'],
             'password' => bcrypt($data['password'])
         ]);
     }
