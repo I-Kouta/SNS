@@ -29,7 +29,8 @@ class UsersController extends Controller
             'username' => $data['username'],
             'mail' => $data['mail'],
             'bio' => $data['bio'],
-            'password' => bcrypt($data['password'])
+            'password' => bcrypt($data['password']),
+            // 'image' => $data['image']
         ]);
     }
 
