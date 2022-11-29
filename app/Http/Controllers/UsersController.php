@@ -42,8 +42,8 @@ class UsersController extends Controller
             'username' => 'required|string|min:2|max:12',
             'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$request->id.',id',
             'password' => 'required|string|min:8|max:20|confirmed',
-            'bio' => 'max:150' // ,
-            // 'image' => 'image'
+            'bio' => 'max:150',
+            'image' => 'mimes:jpg, jpeg, png, gif'
         ]);
         $this->update($data); // ここで更新して
         return redirect('/top');
