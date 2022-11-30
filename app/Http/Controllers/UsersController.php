@@ -24,8 +24,8 @@ class UsersController extends Controller
 
     protected function update(array $data)
     {
-        $user_id = Auth::id();
-        return User::where('id', $user_id)->update([
+        $id = Auth::id();
+        return User::where('id', $id)->update([
             'username' => $data['username'],
             'mail' => $data['mail'],
             'bio' => $data['bio'],
@@ -42,8 +42,7 @@ class UsersController extends Controller
             'username' => 'required|string|min:2|max:12',
             'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$request->id.',id',
             'password' => 'required|string|min:8|max:20|confirmed',
-            'bio' => 'max:150',
-            'image' => 'mimes:jpg, jpeg, png, gif'
+            'bio' => 'max:150'
         ]);
         $this->update($data); // ここで更新して
         return redirect('/top');
