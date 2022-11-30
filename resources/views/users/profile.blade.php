@@ -37,7 +37,7 @@
 
 <div class="category">
   {{ Form::label('icon-image', 'icon image', ['class' => 'icon-image']) }}
-  {{ Form::file('image', ['class' => 'output file']) }}
+  {{ Form::file('image', ['class' => 'output file', 'enctype' => 'multipart/form-data']) }}
 </div>
 {{ Form::submit('更新',['class' => 'red-btn']) }}
 {!! Form::close() !!}
