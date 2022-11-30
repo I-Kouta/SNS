@@ -36,11 +36,10 @@ class UsersController extends Controller
 
     public function profileUpdate(Request $request){
         $data = $request->input(); // ここに入力したデータが入っている
-        $image = $request->file('image');//->store('public/images'); // 画像の登録
-        if($image == null){
-            $image = $request->file('image')->store('public/images/icon5.png');
+        if(isset($request->image)){
+            $request->image = $request->input('images');
         }
-        dd($request['image']); // ここに記載したデータが入る
+        // dd($request['image']); // ここに記載したデータが入る
         $request->validate([
             'username' => 'required|string|min:2|max:12',
             'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$request->id.',id',
