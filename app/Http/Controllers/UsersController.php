@@ -36,8 +36,10 @@ class UsersController extends Controller
 
     public function profileUpdate(Request $request){
         $data = $request->input(); // ここに入力したデータが入っている
-        if(isset($request->image)){
+        if(isset($request->image) != null){
             $request->image = $request->input('images');
+        } else {
+            // 空の場合の記述はここに
         }
         // dd($request['image']); // ここに記載したデータが入る
         $request->validate([
