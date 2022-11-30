@@ -30,7 +30,7 @@ class UsersController extends Controller
             'mail' => $data['mail'],
             'bio' => $data['bio'],
             'password' => bcrypt($data['password']),
-            // 'image' => $data['image']
+            'images' => $data['image']
         ]);
     }
 
@@ -45,7 +45,7 @@ class UsersController extends Controller
             'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$request->id.',id',
             'password' => 'required|string|min:8|max:20|confirmed',
             'bio' => 'max:150',
-            'image' => 'mimes:jpg, png, bmp, gif, svg'
+            'images' => 'mimes:jpg, png, bmp, gif, svg'
 
         ]);
         $this->update($data); // ここで更新して
