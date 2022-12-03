@@ -36,7 +36,8 @@ class UsersController extends Controller
 
     public function profileUpdate(Request $request){
         $data = $request->input(); // ここに入力したデータが入っている
-        $request->file('image')->store('public/'); // storage/app/publicディレクトリに保存したい
+        $file_name = $request->file('image')->getClientOriginalName();
+        $request->file('image')->storeAs('public/', $file_name); // storage/app/publicディレクトリに保存したい
         if(($request['image']) != null){
             $request->image = $request->input('images');
         } else {
