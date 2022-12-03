@@ -49,7 +49,6 @@ class UsersController extends Controller
             'password' => 'required|string|min:8|max:20|confirmed',
             'bio' => 'max:150',
             'images' => 'mimes:jpg, png, bmp, gif, svg'
-
         ]);
         $this->update($data); // ここで更新して
         return redirect('/top');
