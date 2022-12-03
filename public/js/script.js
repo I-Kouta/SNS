@@ -17,9 +17,9 @@ $(function () {
     return false;
   });
 
-  $('.js-modal-close').on('click',function(){
-        // モーダルの中身(class="js-modal")を非表示
-        $('.js-modal').fadeOut();
-        return false;
-    });
+  $('.js-modal-close').on('click', function () {
+    // モーダルの中身(class="js-modal")を非表示
+    $('.js-modal').fadeOut();
+    return false;
+  });
 });

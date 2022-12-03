@@ -30,7 +30,6 @@ class FollowsController extends Controller
             $follower->unFollow($id);
             return back();
         }
-
     }
 
     public function followList(){
