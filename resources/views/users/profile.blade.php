@@ -8,7 +8,7 @@
   <li>{{$error}}</li>
 @endforeach
 
-{!! Form::open(['url' => '/profile/update','class' => 'profile-top']) !!}
+{!! Form::open(['url' => '/profile/update', 'files' => true, 'class' => 'profile-top']) !!}
 {!! Form::hidden('id', $user->id) !!}
 <div class="category">
   {{ Form::label('user-name', 'user name', ['class' => 'name']) }}
@@ -37,7 +37,7 @@
 
 <div class="category">
   {{ Form::label('icon-image', 'icon image', ['class' => 'icon-image']) }}
-  {{ Form::file('image', ['class' => 'output file', 'enctype' => 'multipart/form-data']) }}
+  {{ Form::file('image', ['class' => 'output file']) }}
 </div>
 {{ Form::submit('更新',['class' => 'red-btn']) }}
 {!! Form::close() !!}
