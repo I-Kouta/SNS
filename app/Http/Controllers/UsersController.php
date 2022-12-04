@@ -38,7 +38,6 @@ class UsersController extends Controller
         if(($request['image']) != null){
             $file_name = $request->file('image')->getClientOriginalName();
             $request->file('image')->storeAs('public/', $file_name); // storage/app/publicディレクトリに保存したい
-            $request->image = $request->input('images');
             // dd($request);
         } else {
             // 空の場合の記述はここに
