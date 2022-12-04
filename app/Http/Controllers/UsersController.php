@@ -30,7 +30,6 @@ class UsersController extends Controller
             'mail' => $data['mail'],
             'bio' => $data['bio'],
             'password' => bcrypt($data['password']),
-            'images' => $data['image']
         ]);
     }
 
