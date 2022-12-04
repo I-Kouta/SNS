@@ -4,7 +4,7 @@
 
 {!! Form::open(['url' => 'searchResult','class' => 'post-form']) !!}
 {{ Form::input('text', 'keyword', null, ['required', 'class' => 'search', 'placeholder' => 'ユーザー名']) }}
-<button type="submit"><img src="images/post.png" width="100" height="100"></button>
+<button type="submit"><img src="{{ asset('images/search.png') }}" width="60" height="60"></button>
 @if(!empty($keyword))
 <div class="search-word">
   検索ワード：{{ $keyword }}
