@@ -34,10 +34,13 @@ class UsersController extends Controller
     }
 
     public function profileUpdate(Request $request){
+        $id = Auth::id();
         $data = $request->input(); // ここに入力したデータが入っている
         if(($request['image']) != null){
             $file_name = $request->file('image')->getClientOriginalName();
-            $request->file('image')->storeAs('public/', $file_name); // storage/app/publicディレクトリに保存したい
+            User::where('id', $id)->update([
+                'images' => $request->file('image')->storeAs('public', $file_name) // storage/app/publicディレクトリに保存したい
+            ]);
             // dd($request);
         } else {
             // 空の場合の記述はここに
