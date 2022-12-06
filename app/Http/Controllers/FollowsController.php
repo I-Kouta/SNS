@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use App\Post;
+use App\User;
 
 class FollowsController extends Controller
 {
@@ -42,8 +43,9 @@ class FollowsController extends Controller
         ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
         ->join('users', 'posts.user_id', '=', 'users.id')
         ->get();
+        $image = User::get();
         return view('follows.FollowList')->with([
-            'lists' => $lists,
+            'lists' => $lists, 'image' => $image
         ]);
     }
 
@@ -57,8 +59,9 @@ class FollowsController extends Controller
         ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
         ->join('users', 'posts.user_id', '=', 'users.id')
         ->get();
+        $image = User::get();
         return view('follows.FollowerList')->with([
-            'lists' => $lists,
+            'lists' => $lists, 'image' => $image
         ]);
     }
 }

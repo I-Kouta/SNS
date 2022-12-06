@@ -3,6 +3,8 @@
 @section('content')
 
 <div class="post-form">Follow List</div>
+@foreach ($image as $image)
+@endforeach
 <!-- フォローしているユーザーのみ表示させたい -->
 @foreach ($lists as $list)
 <div class="list">

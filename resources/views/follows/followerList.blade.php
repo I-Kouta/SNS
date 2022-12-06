@@ -3,6 +3,8 @@
 @section('content')
 
 <div class="post-form">Follower List</div>
+@foreach ($image as $image)
+@endforeach
 
 @foreach ($lists as $list)
 <div class="list">
