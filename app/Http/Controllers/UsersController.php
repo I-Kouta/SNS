@@ -44,7 +44,7 @@ class UsersController extends Controller
         } else {
             // 空の場合の記述はここに
         }
-        $request->file('image')->store('public');
+        $request->file('image')->storeAs('public/', $request->file('image')->getClientOriginalName());
         // dd($request['image']); // ここに記載したデータが入る
         $request->validate([
             'username' => 'required|string|min:2|max:12',
