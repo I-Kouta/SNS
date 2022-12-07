@@ -35,17 +35,16 @@ class UsersController extends Controller
 
     public function profileUpdate(Request $request){
         $id = Auth::id();
-        $data = $request->input(); // ここに入力したデータが入っている
         if(($request['image']) != null){
             User::where('id', $id)->update([
                 'images' => $request->file('image')->getClientOriginalName() // storage/app/publicディレクトリに保存したい
             ]);
-            // dd($request);
+            $request->file('image')->storeAs('public/', $request->file('image')->getClientOriginalName());
         } else {
-            // 空の場合の記述はここに
+            User::where('id', $id)->update([
+                'images' => 'Atlas.png'
+            ]);
         }
-        $request->file('image')->storeAs('public/', $request->file('image')->getClientOriginalName());
-        // dd($request['image']); // ここに記載したデータが入る
         $request->validate([
             'username' => 'required|string|min:2|max:12',
             'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$request->id.',id',
@@ -53,7 +52,7 @@ class UsersController extends Controller
             'bio' => 'max:150',
             'images' => 'mimes:jpg, png, bmp, gif, svg'
         ]);
-        $this->update($data); // ここで更新して
+        $this->update($data); // ここで更新
         return redirect('/top');
     }
 
