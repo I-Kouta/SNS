@@ -157,7 +157,7 @@ h1{
     justify-content: space-between;
 }
 
-.output {
+.output{
     border: 2px solid #c0c0c0;
     background-color: #f5f5f5;
     border-radius: 2px;
@@ -194,6 +194,11 @@ h1{
     margin-bottom: 20px;
     padding: 30px 0 20px 40px;
     display: flex;
+}
+
+.form-icon{
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .tweet{

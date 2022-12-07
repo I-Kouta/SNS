@@ -16,7 +16,7 @@
   @foreach ($user as $user)
   @if(Auth::id() != $user->id)
   <div class="search-info">
-    <img class="form-icon" src="{{ asset('images/icon1.png') }}" width="35" height="35">
+    <img src="{{ asset('images/icon1.png') }}" width="35" height="35">
     {{ $user->username }}
     @if (auth()->user()->isFollowing($user->id))
     <p class="unFollow-btn"><a href="/{{$user->id}}/unFollow">フォロー解除</a></p>
