@@ -37,14 +37,14 @@ class UsersController extends Controller
         $id = Auth::id();
         $data = $request->input(); // ここに入力したデータが入っている
         if(($request['image']) != null){
-            $file_name = $request->file('image')->getClientOriginalName();
             User::where('id', $id)->update([
-                'images' => $request->file('image')->storeAs('public', $file_name) // storage/app/publicディレクトリに保存したい
+                'images' => $request->file('image')->getClientOriginalName() // storage/app/publicディレクトリに保存したい
             ]);
             // dd($request);
         } else {
             // 空の場合の記述はここに
         }
+        $request->file('image')->store('public');
         // dd($request['image']); // ここに記載したデータが入る
         $request->validate([
             'username' => 'required|string|min:2|max:12',
