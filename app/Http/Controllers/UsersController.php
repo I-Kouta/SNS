@@ -34,6 +34,7 @@ class UsersController extends Controller
     }
 
     public function profileUpdate(Request $request){
+        $data = $request->input();
         $id = Auth::id();
         if(($request['image']) != null){
             User::where('id', $id)->update([
