@@ -5,7 +5,11 @@
 <div class="post-form">
   Follower List
   @foreach ($image as $image)
+  @if(Auth::id() != $image->id)
+  @if (auth()->user()->isFollowed($image->id))
   <img src="{{ \Storage::url($image->images) }}" width="35" height="35">
+  @endif
+  @endif
   @endforeach
 </div>
 
