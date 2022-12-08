@@ -16,7 +16,7 @@
 @if (auth()->user()->isFollowing($list->user->id) or (Auth::id() == $list->user->id))
 <div class="list">
   <div class="left-list">
-    <img src="{{ asset('images/icon1.png') }}" width="35" height="35">
+    <img src="{{ \Storage::url($list->user->images) }}" width="35" height="35">
     <div class="post-message">
       <div class="under-margin">{{ $list->user->username }}</div>
       <div>{{ $list->post }}</div>
