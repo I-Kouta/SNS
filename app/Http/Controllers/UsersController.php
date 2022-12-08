@@ -12,7 +12,10 @@ class UsersController extends Controller
 {
     //
     public function userProfile($id){
-        $posts = Post::with('user')->where('user_id', $id)->get();
+        $posts = Post::with('user')
+        ->where('user_id', $id)
+        ->orderBy('updated_at', 'desc')
+        ->get();
         $user = User::where('id', $id)->get();
         return view('users.usersProfile',['posts'=>$posts, 'user'=>$user]);
     }
