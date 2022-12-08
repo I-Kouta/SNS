@@ -5,7 +5,7 @@
 {!! Form::open(['url' => 'post/create','class' => 'post-form']) !!}
 @foreach ($image as $image)
 @if(Auth::id() == $image->id)
-<img class="form-icon" src="{{ asset('images/icon1.png') }}" width="35" height="35">
+<img class="form-icon" src="{{ \Storage::url($image->images) }}" width="35" height="35">
 @endif
 @endforeach
 {{ Form::input('text', 'newPost', null, ['required', 'class' => 'tweet', 'placeholder' => '投稿内容を入力してください', 'maxlength' => '200']) }}
