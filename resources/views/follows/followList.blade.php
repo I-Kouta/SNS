@@ -2,9 +2,12 @@
 
 @section('content')
 
-<div class="post-form">Follow List</div>
-@foreach ($image as $image)
-@endforeach
+<div class="post-form">
+  Follow List
+  @foreach ($image as $image)
+  <img src="{{ \Storage::url($image->images) }}" width="35" height="35">
+  @endforeach
+</div>
 <!-- フォローしているユーザーのみ表示させたい -->
 @foreach ($lists as $list)
 <div class="list">
