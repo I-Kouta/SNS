@@ -6,7 +6,9 @@
   Follower List
   @foreach ($image as $image)
   @if (auth()->user()->isFollowed($image->id))
-  <img class="follow-icon" src="{{ \Storage::url($image->images) }}" width="35" height="35">
+  <a href="/user/{{$image->id}}/profile">
+    <img class="follow-icon" src="{{ \Storage::url($image->images) }}" width="35" height="35">
+  </a>
   @endif
   @endforeach
 </div>
