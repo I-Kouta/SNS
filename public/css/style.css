@@ -352,3 +352,8 @@ button{
 .under-margin{
     margin-bottom: 20px;
 }
+
+/* フォロー/フォロワーリスト */
+.follow-icon{
+    margin-left: 20px;
+}
