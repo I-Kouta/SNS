@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="post-form">
+<div class="post-form follow-image">
   Follow List
   @foreach ($image as $image)
   @if (auth()->user()->isFollowing($image->id))

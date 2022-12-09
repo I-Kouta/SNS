@@ -354,6 +354,10 @@ button{
 }
 
 /* フォロー/フォロワーリスト */
+.follow-image{
+    display: flex;
+    flex-wrap: wrap;
+}
 .follow-icon{
     margin-left: 20px;
 }
