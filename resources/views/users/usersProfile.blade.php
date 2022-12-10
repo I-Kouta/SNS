@@ -1,7 +1,7 @@
 @extends('layouts.login')
 
 @section('content')
-
+<!-- ドロップダウン反映されていません -->
 @foreach ($user as $user)
 <div class="post-form">
   <img src="{{ \Storage::url($user->images) }}" width="35" height="35">

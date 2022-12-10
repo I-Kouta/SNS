@@ -11,7 +11,7 @@ use App\Post;
 class UsersController extends Controller
 {
     //
-    public function userProfile($id){
+    public function usersProfile($id){
         $posts = Post::with('user')
         ->where('user_id', $id)
         ->orderBy('updated_at', 'desc')
