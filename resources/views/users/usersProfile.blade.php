@@ -8,11 +8,11 @@
   <div class="post-message prof-head">
     <div class="prof-head-title">
       <div class="under-margin">name</div>
-      <div>bio</div>
+      bio
     </div>
     <div>
       <div class="under-margin">{{ $user->username }}</div>
-      <div>{{ $user->bio }}</div>
+      {{ $user->bio }}
     </div>
   </div>
   @if (auth()->user()->isFollowing($user->id))
@@ -29,11 +29,11 @@
     <img src="{{ \Storage::url($posts->user->images) }}" width="35" height="35">
     <div class="post-message">
       <div class="under-margin">{{ $posts->user->username }}</div>
-      <div>{{ $posts->post }}</div>
+      {{ $posts->post }}
     </div>
   </div>
   <div class="right-list">
-    <div>{{ $posts->updated_at }}</div>
+    {{ $posts->updated_at }}
   </div>
 </div>
 @endforeach

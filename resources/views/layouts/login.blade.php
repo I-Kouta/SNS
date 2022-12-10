@@ -23,7 +23,7 @@
 </head>
 <body>
     <header>
-        <div id = "head">
+        <div id ="head">
             <h1><a href="/top"><img src="{{ asset('images/atlas.png') }}"></a></h1>
             <div id="user-profile">
                 <div id="user-name">

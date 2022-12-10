@@ -21,11 +21,11 @@
     </a>
     <div class="post-message">
       <div class="under-margin">{{ $list->user_name }}</div>
-      <div>{{ $list->post }}</div>
+      {{ $list->post }}
     </div>
   </div>
   <div class="right-list">
-    <div>{{ $list->updated_at }}</div>
+    {{ $list->updated_at }}
   </div>
 </div>
 @endforeach
