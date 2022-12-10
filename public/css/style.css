@@ -1,8 +1,10 @@
 @charset "utf-8";
 html{
 }
+
 body{
 }
+
 /* header */
 header{
     background:#186AC9;
@@ -93,6 +95,7 @@ h1{
     display: flex;
     flex-flow: row wrap;
 }
+
 #container{
     flex: 0 0 80%;
 }
@@ -219,7 +222,6 @@ button{
 }
 
 /* 表示されている投稿 */
-
 .list{
     border-bottom: 3px solid #d3d3d3;
     height: 10vh;
