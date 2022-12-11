@@ -12,9 +12,7 @@ class PostsController extends Controller
 {
     //
     public function index(){
-        $list = Post::with('user')
-        ->orderBy('updated_at', 'desc')
-        ->get();
+        $list = Post::with('user')->latest()->get();
         $image = User::get();
         return view('posts.index',['list'=>$list, 'image'=>$image]);
     }
