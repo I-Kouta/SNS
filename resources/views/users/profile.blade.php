@@ -1,7 +1,6 @@
 @extends('layouts.login')
 
 @section('content')
-<!-- ドロップダウン反映されていません -->
 @foreach ($user as $user)
 <img class="user-image profile-icon" src="{{ asset('images/icon1.png') }}">
 @foreach ($errors->all() as $error)

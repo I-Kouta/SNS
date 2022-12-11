@@ -258,7 +258,7 @@ button{
     height: 100vh;
     position: fixed;
     top: 0;
-    width: 100%; /* ここを編集するとグレーバックの横幅が変わるんだけど。side-barの幅は19% f*/
+    width: 100%;
 }
 
 .modal__bg{
