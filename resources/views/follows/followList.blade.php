@@ -20,7 +20,7 @@
       <img src="{{ \Storage::url($list->user->images) }}" width="35" height="35">
     </a>
     <div class="post-message">
-      <div class="under-margin">{{ $list->user_name }}</div>
+      <div class="under-margin">{{ $list->user->username }}</div>
       {{ $list->post }}
     </div>
   </div>

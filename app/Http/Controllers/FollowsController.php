@@ -35,14 +35,8 @@ class FollowsController extends Controller
 
     public function followList(){
         // 誰を(followed_id)フォローしているか
-        $lists = Post::query()
-        ->whereIn('user_id', Auth::user()
-        ->follows()
-        ->pluck('followed_id'))
-        ->latest()
-        ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
-        ->join('users', 'posts.user_id', '=', 'users.id')
-        ->get();
+        $following_id = Auth::user()->follows()->pluck('followed_id');
+        $lists = Post::with('user')->whereIn('user_id', $following_id)->latest()->get();
         $image = User::get();
         return view('follows.FollowList')->with([
             'lists' => $lists, 'image' => $image
@@ -51,14 +45,8 @@ class FollowsController extends Controller
 
     public function followerList(){
         // 誰が(following_id)自分をフォローしているか
-        $lists = Post::query()
-        ->whereIn('user_id', Auth::user()
-        ->followers()
-        ->pluck('following_id'))
-        ->latest()
-        ->select('posts.id', 'posts.user_id', 'posts.post', 'posts.created_at', 'posts.updated_at', 'users.username as user_name' )
-        ->join('users', 'posts.user_id', '=', 'users.id')
-        ->get();
+        $followed_id = Auth::user()->follows()->pluck('following_id');
+        $lists = Post::with('user')->whereIn('user_id', $followed_id)->latest()->get();
         $image = User::get();
         return view('follows.FollowerList')->with([
             'lists' => $lists, 'image' => $image
