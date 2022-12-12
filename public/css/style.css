@@ -252,7 +252,12 @@ button{
     margin: 20px 0 0 20%;
 }
 
-.delete-btn{
+.img-before{
+    width: 30px;
+    height: 30px;
+}
+
+.img-after{
     width: 30px;
     height: 30px;
 }
