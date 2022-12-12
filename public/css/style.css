@@ -252,6 +252,11 @@ button{
     margin: 20px 0 0 20%;
 }
 
+.delete-btn{
+    width: 30px;
+    height: 30px;
+}
+
 /* 編集画面 */
 .modal{
     display: none;
