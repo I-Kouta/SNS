@@ -249,18 +249,25 @@ button{
 .update-edit{
     display: flex;
     justify-content: space-around;
-    margin: 20px 0 0 20%;
+    margin: 40px 0 0 20%;
+}
+
+#wrap{
+    position: relative;
+    margin-right: 20px;
 }
 
 .img-before{
     width: 30px;
     height: 30px;
+    position: absolute;
 }
 
 .img-after{
     width: 30px;
     height: 30px;
     visibility: hidden;
+    position: absolute;
 }
 
 #wrap:hover .img-before{
