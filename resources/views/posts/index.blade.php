@@ -27,7 +27,7 @@
     @if(Auth::id() == $list->user->id)
     <div class="update-edit">
       <a class="js-modal-open" href="" post="{{ $list->post }}" post_id="{{ $list->id }}"><img src="{{ asset('images/edit.png') }}" width="30" height="30"></a>
-      <a href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')"><img class="delete-btn" src="{{ asset('images/trash.png') }}" width="30" height="30"></a>
+      <a href="/post/{{$list->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')"><img src="{{ asset('images/trash.png') }}" width="30" height="30"></a>
     </div>
     @endif
   </div>
