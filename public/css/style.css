@@ -263,6 +263,14 @@ button{
     visibility: hidden;
 }
 
+#wrap:hover .img-before{
+    visibility: hidden;
+}
+
+#wrap:hover .img-after{
+    visibility: visible;
+}
+
 /* 編集画面 */
 .modal{
     display: none;
