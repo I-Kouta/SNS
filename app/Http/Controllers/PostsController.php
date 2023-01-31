@@ -40,6 +40,8 @@ class PostsController extends Controller
     }
 
     public function delete($id){
+        // Auth::id();はusersテーブルのid
+        //送られてきたpostsのidからuser_idを取り出したい
         Post::where('id', $id)
         ->delete();
         return redirect('/top');
