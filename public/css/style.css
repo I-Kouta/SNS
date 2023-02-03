@@ -75,11 +75,11 @@ h1{
     display: block;
     width: 20px;
     height: 20px;
-    border-left: 2px solid #c0c0c0;
     cursor: pointer; /* マウスオン時のカーソルの形 */
 }
 
 .down{
+    border-left: 2px solid #c0c0c0;
     border-bottom: 2px solid #c0c0c0;
     -webkit-transform: rotate(-45deg); /* 反時計回り\/ */
     margin-left: 80%;
