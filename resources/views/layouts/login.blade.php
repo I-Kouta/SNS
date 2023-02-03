@@ -28,7 +28,7 @@
             <div id="user-profile">
                 <div id="user-name">
                     <p>{{ Auth::user()->username }} さん</p>
-                    <span class="slide-button down"></span>
+                    <span class="slide-button-down"></span>
                     <img class="user-image" src="{{ \Storage::url(Auth::user()->images) }}">
                 </div>
                 <ul>

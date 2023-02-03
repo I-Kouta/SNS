@@ -1,6 +1,6 @@
 $(function () {
   // ドロップダウン
-  $('.slide-button').click(function () { // ↓をクリック
+  $('.slide-button-down').click(function () { // ↓をクリック
     $(this).toggleClass('active'); // ボタンにactiveを追加or削除
     if ($(this).hasClass('active')) {
       $('#user-profile ul li').fadeIn().addClass('active');

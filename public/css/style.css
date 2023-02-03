@@ -68,7 +68,7 @@ h1{
     font-size: 2rem;
 }
 
-.slide-button{
+.slide-button-down{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -76,16 +76,13 @@ h1{
     width: 20px;
     height: 20px;
     cursor: pointer; /* マウスオン時のカーソルの形 */
-}
-
-.down{
     border-left: 2px solid #c0c0c0;
     border-bottom: 2px solid #c0c0c0;
     -webkit-transform: rotate(-45deg); /* 反時計回り\/ */
     margin-left: 80%;
 }
 
-.slide-button.active{
+.slide-button-down.active{
     -webkit-transform: rotate(135deg); /* 時計回り/\ */
     margin-left: 80%;
 }
